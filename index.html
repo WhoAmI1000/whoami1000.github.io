@@ -299,7 +299,7 @@ error = true;
           if(RValue < 50) {
             alert("You do not have enough CirclR Value for this transaction.");
           }
-          else {
+          else if(RValue >= 50) {
     			if(fname === "") {
     				alert("Please enter a name for the function.");
     				return;
