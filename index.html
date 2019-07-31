@@ -172,20 +172,20 @@ width:14.3%
     </div>
   </div>
   <li style="float:right"><a class="active" href="#about">About</a></li>
-</ul>
+  <script>
+      let RValue = 100;
+      </script>
+        <li><p id="showrvalue"></p></li>
+      <script>    
+      let updatervalue = function() {
+      document.getElementById("showrvalue").innerHTML = "Your CirclR Value: " + RValue;
+      };
+      updatervalue();
+      </script>
+  </ul>
 </div>
     <br>
     <br>
-    <script>
-    let RValue = 100;
-    </script>
-      <li><p id="showrvalue"></p></li>
-    <script>    
-    let updatervalue = function() {
-    document.getElementById("showrvalue").innerHTML = "Your CirclR Value: " + RValue;
-    };
-    updatervalue();
-    </script>
     <h1 id="top">CirclR Home</h1>
    
     <br>
