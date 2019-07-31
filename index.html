@@ -9,10 +9,14 @@
                 text-align: center;
             }
             p {
-                font-family: "Helvetica";
+                font-family: "Futura";
             }
             #tit {
-                font-family: "Helvetica";
+                font-family: "Copperplate";
+            }
+            
+            #top {
+            	font-family:"Copperplate";
             }
            
             #images1 {
@@ -34,6 +38,12 @@
             }
             #about {
                 height: 1000px;
+            }
+            #ta1 {
+            	border-radius: 8px;
+            }
+            #calcsec2 {
+            	border-radius: 8px;
             }
             .center {
   display: block;
@@ -138,6 +148,7 @@ width:14.3%
   <li><a href="#research">Research</a></li>
   <li><a href="#ActualNotes">Notes</a></li>
   <li><a href="#fccalculator">Temperature Calculator</a></li>
+  <li><a href="#buyfunc">Purchase A Function</a></li>
   <li><div class="dropdown">
     <button class="dropbtn">External Links(Dropdown)
       <i class="fa fa-caret-down"></i>
@@ -146,6 +157,8 @@ width:14.3%
       <a target="_blank" href="https://www.khanacademy.org">Khan Academy</a>
       <a target="_blank" href="https://images-na.ssl-images-amazon.com/images/I/11C7MTeYlOL._SX331_BO1,204,203,200_.jpg">Chartreuse Color</a>
       <a target="_blank" href="https://www.w3schools.com">W3Schools</a>
+      <a target="_blank" href="file:///Volumes/RYAN%20D%20USB/notes2.html">Notes 2</a>
+      <a target="_blank" href="file:///Volumes/RYAN%20D%20USB/Notes%20Folder/filternotes2.html">Night Light Page (BETA)</a>
     </div>
   </div>
   <li style="float:right"><a class="active" href="#about">About</a></li>
@@ -184,8 +197,11 @@ width:14.3%
         <textarea rows="2" cols="40" id="ta1"></textarea>
         <br>
         <button type="button" id="b1" onclick="func()" class="ib">Calculate!</button>
+        <br>
         <script>
+        //confirm("Circler.xyz wants to know your location, your identity, your credit card number, your debit card number, your debit card CVC, your social security number, and your house address.")
         let output1;
+        let error = false;
         let e = null;
         let outt = "FC";
         let conName = function() {
@@ -194,42 +210,115 @@ width:14.3%
         };
             let func = function() {
                 //alert(output1)
+                error = false;
                 conName();
-                if(document.getElementById("ta1").value == "") {
+                let splitta1 = document.getElementById("ta1").value.split(" ");
+                let space = splitta1.length;
+                //alert(y);
+                if(space > 1 && error === false) {
+                	alert("Error.")
+error = true;
+                }
+                if(document.getElementById("ta1").value === "" && error === false) {
                     alert("Error.");
                     document.getElementById("func1out").innerHTML = "Please input a number.";
+                    error = true;
                 }else{
                     //alert("Made it past.");
+                    document.body.style.backgroundColor = "paleturquoise";
                     if(outt === "CF"){
-                        output1 = ((document.getElementById("ta1").value * 9/5 + 32)+ " degrees Fahrenheit");
+                        output1 = ((parseFloat(document.getElementById("ta1").value) * 9/5 + 32)+ " degrees Fahrenheit");
                         document.getElementById("func1out").innerHTML = output1;
+                        document.getElementById("func2out").innerHTML = "N x 9/5 + 32";
                     }else if(outt === "FC") {
-                        output1 = (((document.getElementById("ta1").value - 32) * 5/9) + " degrees Celsius");
+                        output1 = (((parseFloat(document.getElementById("ta1").value) - 32) * 5/9) + " degrees Celsius");
                         document.getElementById("func1out").innerHTML = output1;
+                        document.getElementById("func2out").innerHTML = "(N - 32) x 5/9";
                     }else if(outt === "FK"){
-                        output1 = (((document.getElementById("ta1").value - 32)*5/9) + 273.15 + " Kelvin");
+                        output1 = (((parseFloat(document.getElementById("ta1").value) - 32)*5/9) + 273.15 + " Kelvin");
                         document.getElementById("func1out").innerHTML = output1;
+                        document.getElementById("func2out").innerHTML = "(N - 32) x 5/9 + 273.15";
                     }else if(outt === "CK") {
-                        output1 = (document.getElementById("ta1").value + 273.15 + " Kelvin");
+                        output1 = (parseFloat(document.getElementById("ta1").value) + 273.15 + " Kelvin");
                         document.getElementById("func1out").innerHTML = output1;
+                        document.getElementById("func2out").innerHTML = "N + 273.15";
                     }else if(outt === "KF") {
-                        output1 = (((document.getElementById("ta1").value - 273.15)*9/5 + 32) + " degrees Fahrenheit");
+                        output1 = (((parseFloat(document.getElementById("ta1").value) - 273.15)*9/5 + 32) + " degrees Fahrenheit");
                         document.getElementById("func1out").innerHTML = output1;
+                        document.getElementById("func2out").innerHTML = "(N - 273.15) x 9/5 + 32";
                     }else if(outt === "KC") {
-                        output1 = ((document.getElementById("ta1").value - 275.15) + " degrees Celsius");
+                        output1 = ((parseFloat(document.getElementById("ta1").value) - 275.15) + " degrees Celsius");
                         document.getElementById("func1out").innerHTML = output1;
+                        document.getElementById("func2out").innerHTML = "N - 275.15";
                     }
+                }
+                if(document.getElementById("func1out").innerHTML === "NaN degrees Fahrenheit" && error === false) {
+                	alert("Error.")
+                	document.getElementById("func1out").innerHTML = "Please input a number.";
+                	error = true;
+                }
+                                if(document.getElementById("func1out").innerHTML === "NaN degrees Celsius" && error === false) {
+                	alert("Error.")
+                	document.getElementById("func1out").innerHTML = "Please input a number.";
+                	error = true;
+                }
+                                if(document.getElementById("func1out").innerHTML === "NaN Kelvin" && error === false) {
+                	alert("Error.")
+document.getElementById("func1out").innerHTML = "Please input a number.";
+error = true;
                 }
             };
         </script>
         <br>
+        <br>
         <h3><div id="func1out"></div></h3>
+        <br>
+        <p>Formula: <div id="func2out"></div></p>
     </div>
+    <br>
+    <br>
+    <h2>Good Music:</h2>
+    <div id="fun">
+<iframe width="420" height="315"
+src="https://www.youtube.com/watch?v=mX-SktWVHao">
+</iframe>
+<br>
+<p id="buyfunc"></p>
+<br>
+<br>
+<h2>Buy A Function!</h2>
+<textarea rows="2" cols="40" id="ta2"></textarea>
+<br>
+<button type="button" id="b1" onclick="v()" class="ib">Purchase</button>
+    	<script>
+    		let v = function() {
+    			let fname = document.getElementById("ta2").value;
+    			if(fname === "") {
+    				alert("Please enter a name for the function.");
+    				return;
+    			}
+    			let tof = confirm("Are you sure you want to purchase the function with the name '" + fname + "'?");
+    			if(tof === true) {
+    				document.getElementById("bon").innerHTML = "The function '" + fname + "' has been bought. Your CirclR value has been updated. You will be able to do more with your CirclR value soon.";
+    			}
+    			else {
+    				document.getElementById("bon").innerHTML = "The transaction for the function '" + fname + "' was not completed.";
+    			}
+    		};
+    	</script>
+    	<script>
+    	
+    	</script>
+    </div>
+    <h3><div id="bon"></div></h3>
+    <br>
     <div id="about">
+    <br>
+    <br>
     <h2>About</h2>
     <br>
     <br>
-    <p>This webpage was started on 6-17-2019 A.D.</p>
+    <p>This webpage was started on 6-17-2019 A.D. We are not responsible for damage or harm to yourself, another person, an animal, or an object, from this website. We are not liable for anything involving this website, and we are especially not liable for anything <em>not</em> involving this website.</p>
     </div>
     </body>
 </html>
