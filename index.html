@@ -5,7 +5,7 @@
         <title>Home | RNotes</title>
         <style>
             body {
-                background-color: paleturquoise;
+                background-color: white;
                 text-align: center;
             }
             p {
@@ -112,7 +112,7 @@ width:14.3%
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: lightgray;
+  background-color: black;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
@@ -120,7 +120,7 @@ width:14.3%
  
 .dropdown-content a {
   float: none;
-  color: white;
+  color: black;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
@@ -145,7 +145,6 @@ width:14.3%
 <div id="navbar">
 <ul>
   <li><a href="#top">Home</a></li>
-  <li><a href="#research">Research</a></li>
   <li><a href="#ActualNotes">Notes</a></li>
   <li><a href="#fccalculator">Temperature Calculator</a></li>
   <li><a href="#buyfunc">Purchase A Function</a></li>
@@ -170,17 +169,6 @@ width:14.3%
    
     <br>
     <img src="https://www.bing.com/th?id=OIP.65j2q3N1PFU6gwEQkCWDKAHaEK&pid=Api&rs=1&p=0" id="img1" class="center" alt="Blue binary complex imaginary building">
-    <h2 id="mythoughts">My thoughts on this page</h2>
-    <p class="pa">This is a boring webpage. I wish I could add a background image or some CSS tags. This is a very boring and sad website.<p>
-    <br>
-    <p class="pa">Hi. CSS tags are awesome. When can we start making a <b>REAL</b> website?</p>  
-    <div id="research"><h2>Research</h2>
-    <p>CSS 3 is a new version of CSS which allows users and programmers to customize their websites<br>easily and efficiently. CSS 2 is now outdated and should never be used.</p>
-    <p class="ghighlight">To learn CSS3, you can go to <a target="_blank" href="https://www.khanacademy.org" style="text-decoration: none;"> Khan Academy</a>.</p>
-    </div>
-    <div id="ActualNotes">
-        <h2>Actual Notes</h2>
-    </div>
     <div id="fccalculator">
         <h2>Fahrenheit, Celsius, and Kelvin Calculator</h2>
         <select name="calcSec" id="calcSec2">
@@ -225,7 +213,6 @@ error = true;
                     error = true;
                 }else{
                     //alert("Made it past.");
-                    document.body.style.backgroundColor = "paleturquoise";
                     if(outt === "CF"){
                         output1 = ((parseFloat(document.getElementById("ta1").value) * 9/5 + 32)+ " degrees Fahrenheit");
                         document.getElementById("func1out").innerHTML = output1;
