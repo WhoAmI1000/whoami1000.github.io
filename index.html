@@ -299,6 +299,7 @@ error = true;
           if(RValue < 50) {
             alert("You do not have enough CirclR Value for this transaction.");
           }
+          else {
     			if(fname === "") {
     				alert("Please enter a name for the function.");
     				return;
@@ -313,6 +314,7 @@ error = true;
     			else {
     				document.getElementById("bon").innerHTML = "The transaction for the function '" + fname + "' was not completed.";
     			}
+          }
     		};
     	</script>
     	<script>
