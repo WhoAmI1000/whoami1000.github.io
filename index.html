@@ -184,6 +184,7 @@ width:14.3%
     let updatervalue = function() {
     document.getElementById("showrvalue").innerHTML = "Your CirclR Value: " + RValue;
     };
+    updatervalue();
     </script>
     <h1 id="top">CirclR Home</h1>
    
@@ -306,6 +307,7 @@ error = true;
     			if(tof === true) {
     				document.getElementById("bon").innerHTML = "The function '" + fname + "' has been bought. Your CirclR value has been updated. You will be able to do more with your CirclR value soon.";
             Rvalue -= 50;
+            updatervalue();
     			}
     			else {
     				document.getElementById("bon").innerHTML = "The transaction for the function '" + fname + "' was not completed.";
