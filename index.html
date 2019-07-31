@@ -67,14 +67,14 @@
 li {
   float: left;
 }
-/*#showrvalue {
+#showrvalue {
   position: fixed;
   background-color:black;
   display:block;
   color:white;
   width:14.3%;
   left:0%;
-  bottom:0%;*/
+  bottom:0%;
 }
 li a {
   display: block;
@@ -159,16 +159,6 @@ width:14.3%
   <li><a href="#ActualNotes">Notes</a></li>
   <li><a href="#fccalculator">Temperature Calculator</a></li>
   <li><a href="#buyfunc">Purchase A Function</a></li>
-  <script>
-      let RValue = 100;
-      </script>
-        <li><p id="showrvalue"></p></li>
-      <script>    
-      let updatervalue = function() {
-      document.getElementById("showrvalue").innerHTML = "Your CirclR Value: " + RValue;
-      };
-      updatervalue();
-      </script>
   <li><div class="dropdown">
     <button class="dropbtn">External Links(Dropdown)
       <i class="fa fa-caret-down"></i>
@@ -184,10 +174,19 @@ width:14.3%
   <li style="float:right"><a class="active" href="#about">About</a></li>
   </ul>
 </div>
+<script>
+    let RValue = 100;
+    </script>
+      <p id="showrvalue"></p>
+    <script>    
+    let updatervalue = function() {
+    document.getElementById("showrvalue").innerHTML = "Your CirclR Value: " + RValue;
+    };
+    updatervalue();
+    </script>
     <br>
     <br>
     <h1 id="top">CirclR Home</h1>
-   
     <br>
     <img src="https://www.bing.com/th?id=OIP.65j2q3N1PFU6gwEQkCWDKAHaEK&pid=Api&rs=1&p=0" id="img1" class="center" alt="Blue binary complex imaginary building">
     <div id="fccalculator">
