@@ -306,8 +306,9 @@ error = true;
     			let tof = confirm("Are you sure you want to purchase the function with the name '" + fname + "'?");
     			if(tof === true) {
     				document.getElementById("bon").innerHTML = "The function '" + fname + "' has been bought. Your CirclR value has been updated. You will be able to do more with your CirclR value soon.";
-            Rvalue -= 50;
+            Rvalue = Rvalue - 50;
             updatervalue();
+            alert("Transaction completed.");
     			}
     			else {
     				document.getElementById("bon").innerHTML = "The transaction for the function '" + fname + "' was not completed.";
