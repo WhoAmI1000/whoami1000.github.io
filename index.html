@@ -159,6 +159,16 @@ width:14.3%
   <li><a href="#ActualNotes">Notes</a></li>
   <li><a href="#fccalculator">Temperature Calculator</a></li>
   <li><a href="#buyfunc">Purchase A Function</a></li>
+  <script>
+      let RValue = 100;
+      </script>
+        <li><p id="showrvalue"></p></li>
+      <script>    
+      let updatervalue = function() {
+      document.getElementById("showrvalue").innerHTML = "Your CirclR Value: " + RValue;
+      };
+      updatervalue();
+      </script>
   <li><div class="dropdown">
     <button class="dropbtn">External Links(Dropdown)
       <i class="fa fa-caret-down"></i>
@@ -172,16 +182,6 @@ width:14.3%
     </div>
   </div>
   <li style="float:right"><a class="active" href="#about">About</a></li>
-  <script>
-      let RValue = 100;
-      </script>
-        <li><p id="showrvalue"></p></li>
-      <script>    
-      let updatervalue = function() {
-      document.getElementById("showrvalue").innerHTML = "Your CirclR Value: " + RValue;
-      };
-      updatervalue();
-      </script>
   </ul>
 </div>
     <br>
