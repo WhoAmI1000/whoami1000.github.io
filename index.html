@@ -164,10 +164,15 @@ width:14.3%
     </div>
   </div>
   <li style="float:right"><a class="active" href="#about">About</a></li>
+  <li><p id="showrvalue"></p></li>
 </ul>
 </div>
     <br>
     <br>
+    <script>
+    let RValue = 100;
+    document.getElementById("showrvalue").innerHTML = "Your CirclR Value: " + RValue;
+    </script>
     <h1 id="top">CirclR Home</h1>
    
     <br>
@@ -278,6 +283,9 @@ error = true;
     	<script>
     		let v = function() {
     			let fname = document.getElementById("ta2").value;
+          if(RValue < 50) {
+            alert("You do not have enough CirclR Value for this transaction.");
+          }
     			if(fname === "") {
     				alert("Please enter a name for the function.");
     				return;
@@ -285,6 +293,7 @@ error = true;
     			let tof = confirm("Are you sure you want to purchase the function with the name '" + fname + "'?");
     			if(tof === true) {
     				document.getElementById("bon").innerHTML = "The function '" + fname + "' has been bought. Your CirclR value has been updated. You will be able to do more with your CirclR value soon.";
+            Rvalue -= 50;
     			}
     			else {
     				document.getElementById("bon").innerHTML = "The transaction for the function '" + fname + "' was not completed.";
