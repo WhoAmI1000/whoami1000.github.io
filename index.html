@@ -294,6 +294,13 @@ error = true;
 <br>
 <button type="button" id="b1" onclick="v()" class="ib">Purchase</button>
     	<script>
+        let transaction1 = function() {
+          document.getElementById("bon").innerHTML = "The function '" + fname + "' has been bought. Your CirclR value has been updated. You will be able to do more with your CirclR value soon.";
+            Rvalue = Rvalue - 50;
+            updatervalue();
+            alert("Transaction completed.");
+
+        };
     		let v = function() {
     			let fname = document.getElementById("ta2").value;
           if(RValue < 50) {
@@ -305,10 +312,7 @@ error = true;
     			}
     			let tof = confirm("Are you sure you want to purchase the function with the name '" + fname + "'?");
     			if(tof === true) {
-    				document.getElementById("bon").innerHTML = "The function '" + fname + "' has been bought. Your CirclR value has been updated. You will be able to do more with your CirclR value soon.";
-            Rvalue = Rvalue - 50;
-            updatervalue();
-            alert("Transaction completed.");
+            transaction1();
     			}
     			else {
     				document.getElementById("bon").innerHTML = "The transaction for the function '" + fname + "' was not completed.";
