@@ -298,6 +298,7 @@ error = true;
           let fname = document.getElementById("ta2").value;
         };
         let transaction1 = function() {
+          getfname();
           document.getElementById("bon").innerHTML = "The function '" + fname + "' has been bought. Your CirclR value has been updated. You will be able to do more with your CirclR value soon.";
             Rvalue = Rvalue - 50;
             updatervalue();
