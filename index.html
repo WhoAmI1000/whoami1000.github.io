@@ -294,6 +294,9 @@ error = true;
 <br>
 <button type="button" id="b1" onclick="v()" class="ib">Purchase</button>
     	<script>
+        let getfname = function () {
+          let fname = document.getElementById("ta2").value;
+        };
         let transaction1 = function() {
           document.getElementById("bon").innerHTML = "The function '" + fname + "' has been bought. Your CirclR value has been updated. You will be able to do more with your CirclR value soon.";
             Rvalue = Rvalue - 50;
