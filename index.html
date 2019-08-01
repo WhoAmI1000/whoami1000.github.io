@@ -175,13 +175,13 @@ width:14.3%
   </ul>
 </div>
 <script>
-    let RValue = 100;
+    var RValue = 100;
     </script>
       <p id="showrvalue"></p>
     <script>    
     let updatervalue = function() {
-    document.getElementById("showrvalue").innerHTML = "Your CirclR Value: " + RValue;
-    return;
+      document.getElementById("showrvalue").innerHTML = "Your CirclR Value: " + RValue;
+      return;
     };
     updatervalue();
     </script>
@@ -307,10 +307,10 @@ error = true;
     			}
     			let tof = confirm("Are you sure you want to purchase the function with the name '" + fname + "'?");
     			if(tof === true) {
+            updRValue = RValue - 50;
             document.getElementById("bon").innerHTML = "The function '" + fname + "' has been bought. Your CirclR value has been updated. You will be able to do more with your CirclR value soon.";
-            updRValue = parseFloat(Rvalue - 50);
             RValue = updRValue;
-            updatervalue();
+            updatervalue(RValue);
             alert("Transaction completed.");
     			}
     			else {
