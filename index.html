@@ -182,6 +182,7 @@ width:14.3%
     <script>    
     let updatervalue = function() {
     document.getElementById("showrvalue").innerHTML = "Your CirclR Value: " + RValue;
+    return;
     };
     updatervalue();
     </script>
@@ -209,6 +210,7 @@ width:14.3%
         <br>
         <script>
         //confirm("Circler.xyz wants to know your location, your identity, your credit card number, your debit card number, your debit card CVC, your social security number, and your house address.")
+        let updRValue = 100;
         let output1;
         let error = false;
         let e = null;
@@ -307,7 +309,8 @@ error = true;
     			let tof = confirm("Are you sure you want to purchase the function with the name '" + fname + "'?");
     			if(tof === true) {
             document.getElementById("bon").innerHTML = "The function '" + fname + "' has been bought. Your CirclR value has been updated. You will be able to do more with your CirclR value soon.";
-            Rvalue = Rvalue - 50;
+            updRValue = parseFloat(Rvalue - 50);
+            RValue = updRValue;
             updatervalue();
             alert("Transaction completed.");
     			}
