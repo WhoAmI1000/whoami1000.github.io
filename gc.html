@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html> 
+  <head>
+    <title>Ground Control Testing Laboratory</title> 
+  </head>
+  <style>
+    #mycanvas {
+      text-align:center;
+    }
+  </style>
+  <body>
+	<!--This draws the canvas on the webpage -->
+    <center><canvas id="mycanvas"></canvas></center>
+  </body>
+  <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js" style="width:100%"></script> 
+  <script style="width:100%">
+  var programCode = function(processingInstance) {
+    with (processingInstance) {
+      size(window.screen.availWidth-50, window.screen.availHeight-100); 
+      frameRate(30);
+      //PROCESSING CODE HERE
+      background(0,0,0);
+      
+    }};
+
+  var canvas = document.getElementById("mycanvas"); 
+  var processingInstance = new Processing(canvas, programCode); 
+  </script>
+</html>
