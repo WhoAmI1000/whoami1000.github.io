@@ -296,16 +296,6 @@ background-size: cover;
 .linkimg {
   border-radius: 5%;
 }
-#articlee {
-  width:35%;
-  background-color:white;
-  text-align:center;
-  border:0.5px solid lightgray;
-  align-items:center;
-  margin:0 auto;
-  font-family: 'Abhaya Libre';
-  padding:5px;
-}
 .buttongray {
   background-color:gray; /* Gray */
   border: none;
@@ -322,7 +312,26 @@ background-size: cover;
 .button3 {font-size: 16px;}
 .button4 {font-size: 20px;}
 .button5 {font-size: 20px;}
- 
+.articlemobile{
+  width:95%;
+  background-color:white;
+  text-align:center;
+  border:0.5px solid lightgray;
+  align-items:center;
+  margin:0 auto;
+  font-family: 'Abhaya Libre';
+  padding:5px;
+}
+.articledesktop{
+  width:35%;
+  background-color:white;
+  text-align:center;
+  border:0.5px solid lightgray;
+  align-items:center;
+  margin:0 auto;
+  font-family: 'Abhaya Libre';
+  padding:5px;
+}
  
 </style>
 </head>
@@ -373,7 +382,17 @@ background-size: cover;
     Pros:<br>Ultra-realistic<br>Trusted<br>Many planes<br>Great graphics<br>Great scenery<br>ATC<br>Worldwide Scenery<br><br>Cons:<br>Requries a very good computer to run it<br><br>Flight Simulator 2020 is a simulator in the works. It is currently going through testing, but it has EXTREMELY good graphics (better than X-Plane 11) and is more realistic. It is not out for purchase yet, but if you choose this simulator,<br>you will have to wait until it comes out to get it.<br>Pros:<br><br>Ultra-realistic<br>Good scenery<br>Worldwide accurate weather<br>Many airports<br><br>Cons:<br><br>Requires a good computer to run it<br>Not out yet<br><br>Now, it is time
     to decide which simulator you should get. If you have a good computer, look to X-Plane 11 or waiting for FS2020 (coming out this year (2020)). If you don't have a really good computer, look to FSX. If you have a computer in between, look to DCS world and GeoFS (paid). You can use online tools to see what your computer can and can't run. Next, what type of flying do you want? Military? Go for DCS World. General and Commercial? Go for the others. Now, the price. What is your budget? 0-30? Go for FSX, DCS World, or GeoFS. $30-60? Look to X-Plane. $60+? You can look to any simulator. FS2020 does not yet have a set price, but be prepared for whatever price it comes at.
     </p>
-    <br></div>
+    <br></div><script>
+      var mobile;
+    if( screen.availWidth <= 750 ) {
+        mobile = true;
+    }
+    if(screen.availWidth > 750){
+      mobile = false;
+    }
+      if(mobile===true){
+        document.getElementById("articlee").setAttribute("class","articlemobile");
+      }if(mobile===false){document.getElementById("articlee").setAttribute("class","articledesktop");}</script>
     <br><br><br><br><br><br><br><br><br><br><br>
     <br>
     <br></div><div id='info'>
