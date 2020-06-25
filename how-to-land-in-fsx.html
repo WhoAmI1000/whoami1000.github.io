@@ -296,16 +296,6 @@ background-size: cover;
 .linkimg {
   border-radius: 5%;
 }
-#articlee {
-  width:35%;
-  background-color:white;
-  text-align:center;
-  border:0.5px solid lightgray;
-  align-items:center;
-  margin:0 auto;
-  font-family: 'Abhaya Libre';
-  padding:5px;
-}
 .buttongray {
   background-color:gray; /* Gray */
   border: none;
@@ -317,6 +307,26 @@ background-size: cover;
   font-size: 16px;
   cursor: pointer;
 }
+.articlemobile{
+  width:95%;
+  background-color:white;
+  text-align:center;
+  border:0.5px solid lightgray;
+  align-items:center;
+  margin:0 auto;
+  font-family: 'Abhaya Libre';
+  padding:5px;
+}
+.articledesktop{
+  width:35%;
+  background-color:white;
+  text-align:center;
+  border:0.5px solid lightgray;
+  align-items:center;
+  margin:0 auto;
+  font-family: 'Abhaya Libre';
+  padding:5px;
+}
 .button1 {font-size: 10px;}
 .button2 {font-size: 12px;}
 .button3 {font-size: 16px;}
@@ -327,6 +337,16 @@ background-size: cover;
 </style>
 </head>
 <body>
+  <script>/*if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    var mobile = true;
+  }*/var mobile;
+  if( screen.availWidth <= 750 ) {
+      mobile = true;
+  }
+  if(screen.availWidth > 750){
+    mobile = false;
+  }
+</script>
 <div id="navbar">
 <ul>
   <li><a href="/index.html">Home</a></li>
@@ -362,9 +382,9 @@ background-size: cover;
       <br><br>
       <div id='articlee'><h2>Landing</h2><br><br>
       <p style='font-size:24px;'> For begginers in a flight simulator, landing is a hard challenge that takes hard work and dedication. For this tutorial, you will need to know the basics of how to control your aircraft such as the main control surfaces (elevators, ailerons, rudder), throttle controls, flaps, etc. This tutorial is for Microsoft Flight Simulator X, not X-Plane 11, Microsoft Flight Simulator 2020, or P3D, however the same concepts apply for all those flight simulators.You can even use this for online flight simulators. Any simulator will work, because these are just the basic tips for landing (we are just using FSX as an example). However, this should not be used for real life. For landing in real life, get professional flight training.<br><br>If you are flying with ATC, make sure to get clearance for starting your approach. If you are doing an IFR flight, ATC will usually clear you for an approach without you having to ask for it. Example communications:<br><b><i>ATC: (Callsign), cleared for the (visual, option, or ILS) approach for runway (runway).<br>Pilot: Cleared for the (visual, option, or ILS) approach, runway (runway), (callsign).<br></i></b><br>Once you have been cleared for the approach, you can proceed. Some airports have ILS approaches, but for this tutorial, we will be talking about visual approaches (no autopilot).<br><br>When landing, you have to be sure that it is safe to land. ATC will not clear you to land unless they think there is no danger, but sometimes they have made mistakes. Many of those are caused by distractions in the tower. While landing, make sure to look for any obstacles on the runway (planes, shrapnel, etc). While on the approach, also maintain seperation from all other aircraft. Safety is always the most important thing, and always be safe, even in a simulator, so you get used to it, and naturally do it in the real world.<br><br>First of all, you will want to start your approach. If you are not already in the air, spawn in at a 5-10 mile approach. On the approach, keep the aircraft on a steady glideslope, and make sure you always know where the runway is. If you don't think you can land on this approach, go around for another try. In the real world, this is a very important thing to remember. It's better to explain why you did it than have others find out why you didn't. Of course, this is a simulator, but if you want to be a pilot, you should always try to act like this is real, even in a simulator. On your approach, make sure to keep a steady descent rate. Try to line up with the runway in advance. Make small corrections to avoid overcontrolling. You can easily be thrown off course if you overcontrol. Remember to keep steady on the approach.<br><br>Continue on your approach. Gradually keep lowering your flaps (by pressing the F7 key if you did not change the flap control settings), and gradually reduce your airspeed to right above stall speed. This varies for different aircraft. For a Cessna, it would be about 65 knots. CRJ700 would be 130 knots. 737 would be about 155 knots.  When you are a good distance away from the runway (It's not too far away, and not too close. A good distance is shown in this image (below)), lower your gear (press G) and make sure flaps are completely set (press F8). Press SHIFT + / to arm the spoilers.</p><img src='https://i.ibb.co/7VDpdgz/2020-6-22-18-54-49-318-1.png' style='border-radius: 10px;'></img>  <p style='font-size:24px;'>Once everything is set, continue on the approach and wait until you are almost right above the runway. Reduce thrust all the way to idle and pitch the nose up very slightly. This is called flaring.</p><img src='https://i.ibb.co/ChS6k5D/aircraft-4544819-960-720-1.jpg' style='border-radius: 10px;'></img>  <p style='font-size:24px'>Once you have touched down, press and hold F2 to activate thrust reversers (if you are in a jet). Once you are at 60 knots, disengage the thrust reversers, and you can start braking (if you didn't set autobrakes (autobrakes only in Boeing planes)).  Congrats! You have landed a plane in FSX!</p><br><br>
-    <br></div>        <script>if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-      document.getElementById('articlee').style.width="100";
-    };</script>
+    <br></div><script>if(mobile===true){
+      document.getElementById("articlee").setAttribute("class","articlemobile");
+    }if(mobile===false){document.getElementById("articlee").setAttribute("class","articledesktop");}</script>
     <br><br><br><br><br><br><br><br><br><br><br>
     <br>
     <br></div><div id='info'>
