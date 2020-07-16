@@ -9,6 +9,7 @@
         <meta name="keywords" content="Circle R, CirclR, CircleR, Website, Technology, Flight Sim, Tutorials, Flight Sim Tutorials, FSX Tutorial, FSX Tutorials, tutorial, tutorials, games, build a computer, tech help">
         <meta name="author" content="The CirclR Team">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=5f0fb210519b1c0012ecfafa&product=inline-share-buttons" async="async"></script>
         <html lang="en"></html>
         <script>if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
           window.location.replace('/mobilehome.html');
@@ -27,7 +28,7 @@
 </script>
         <style>
             body {
-                background-color: darkgray;
+              background-color:rgb(20, 20, 20);
                 font: Verdana;
                 text-align: center;
                 max-width: 100%;
@@ -337,6 +338,10 @@ background-size: cover;
   width:90px;
   font-weight:bold;
 }
+.fademe{
+opacity:0;
+transition:0.75s;
+}
 .button1 {font-size: 10px;}
 .button2 {font-size: 12px;}
 .button3 {font-size: 16px;}
@@ -347,6 +352,7 @@ background-size: cover;
   font-size:48px;
   color:white;
 } 
+
 </style>
 </head>
 <body>
@@ -369,7 +375,7 @@ background-size: cover;
   <li></li>
   </ul>
 </div>
-<div id="img1n"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><h1 id="txt1", style='font-family:"Times New Roman", Times, Serif;text-align: center;'>CirclR Home</h1><br><p id='sp'>Technology Tutorials.<br>Flight Simulator Tutorials.<br>Games.</p><a class='buttongraym' href='#tutorials'>Tutorials</a><br><a class='buttongraym' href='/browse-games'>Games</a></div>
+<div id="img1n"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><h1 id="txt1" style='font-family:"Times New Roman", Times, Serif;text-align: center;'>CirclR Home</h1><br><div class='fademe' id='cd1'><p id='sp'>Technology Tutorials.<br>Flight Simulator Tutorials.<br>Games.</p><a class='buttongraym' href='#tutorials'>Tutorials</a><br><a class='buttongraym' href='/browse-games'>Games</a></div></div>
     <!--<div id="top"></div>-->
     <!--<div id="links" class="containimage">
       <a href="/techhelp.html"><img src="https://i.imgur.com/05DTvTl.jpg" alt="Links not showing, Sorry! (Tech Tutorials Link)" class="border5"></a>
@@ -397,13 +403,35 @@ background-size: cover;
     <div id="img3n"><br><br><br><br><br><span id='tutorials'></span><br><br><br><br><br><br><p style="text-align:center;" id="img3nt">Tech Tutorials</p><button class="buttongray button5" style="border-radius: 5px;" onclick="redirect1()">Get Started!</button></div>
     <div id="img2n"><br><br><br><br><br><br><br><br><br><br><br><p style="text-align:center;" id="img2nt">Flight Sim Tutorials</p><button class="buttongray button5" style="border-radius: 5px;" onclick="redirect2()">Get Started!</button></div>
     <div id="img4n"><br><br><br><br><br><br><br><br><br><br><br><p style="text-align:center;" id="img2nt">Games</p><button class="buttongray button5" style="border-radius: 5px;" onclick="redirect3()">Browse Games</button></div><div id='contact'>
-    <br>
+    <br><script>
+      window.onload = function(){
+      document.getElementById("cd1").style.opacity = 1;
+      }
+      </script><script>function FadeInSection(props) {
+  const [isVisible, setVisible] = React.useState(true);
+  const domRef = React.useRef();
+  React.useEffect(() => {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => setVisible(entry.isIntersecting));
+    });
+    observer.observe(domRef.current);
+    return () => observer.unobserve(domRef.current);
+  }, []);
+  return (
+    <div
+      className={`fade-in-section ${isVisible ? 'is-visible' : ''}`}
+      ref={domRef}
+    >
+      {props.children}
+    </div>
+  );
+}
+</script>
     <h2>About</h2>
     <p style='font-size:16px;'><a style='text-decoration:none;' target='_blank' href='/terms-and-conditions'>Terms and Conditions</a><br><a style='text-decoration:none;' target='_blank' href='/privacy-policy'>Privacy Policy</a><br><a style='text-decoration:none;' href='/contact-us'>Contact Us</a><br><a style='text-decoration:none;' href='/mobilehome.html'>Mobile Home</a></p>
     <!--<div class="sharethis-inline-share-buttons"></div><br><br>-->
     <br><br><h2>Visitor Count</h2><br>
     <div align='center'><img src='https://www.free-website-hit-counter.com/c.php?d=9&id=123448&s=5' border='0' alt='Hit counter should be here, but it is not :('><br/></div>
-    <!-- AddToAny BEGIN -->
 <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
   <a class="a2a_button_facebook"></a>
   <a class="a2a_button_twitter"></a>
