@@ -320,13 +320,33 @@ background-size: cover;
   font-size: 16px;
   cursor: pointer;
 }
+.buttongraym {
+  background-color:rgb(165, 166, 167);
+  border: none;
+  color: rgb(54, 54, 54);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius:25px;
+  font:Verdana;
+  font-size:24px;
+  margin:5px;
+  width:90px;
+  font-weight:bold;
+}
 .button1 {font-size: 10px;}
 .button2 {font-size: 12px;}
 .button3 {font-size: 16px;}
 .button4 {font-size: 20px;}
 .button5 {font-size: 24px;}
- 
- 
+#sp{
+  font-family: "Times New Roman", Times, serif;
+  font-size:48px;
+  color:white;
+} 
 </style>
 </head>
 <body>
@@ -336,7 +356,7 @@ background-size: cover;
   <li><a href="#img3n">Tech Tutorials</a></li>
   <li><a href="#img2n">Flight Sim Tutorials</a></li>
   <li><a href="#img4n">Games</a></li>
-  <li><a href="#contact">Contact Us</a></li>
+  <li><a href="/contact-us">Contact Us</a></li>
   <!--<li><div class="dropdown">
     <button class="dropbtn">External Links (Dropdown)
       <i class="fa fa-caret-down"></i>
@@ -349,7 +369,7 @@ background-size: cover;
   <li></li>
   </ul>
 </div>
-<div id="img1n"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><h1 id="txt1", style='font: Verdana;text-align: center;'>CirclR Home</h1></div>
+<div id="img1n"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><h1 id="txt1", style='font-family:"Times New Roman", Times, Serif;text-align: center;'>CirclR Home</h1><br><p id='sp'>Technology Tutorials.<br>Flight Simulator Tutorials.<br>Games.</p><a class='buttongraym' href='#tutorials'>Tutorials</a><br><a class='buttongraym' href='/browse-games'>Games</a></div>
     <!--<div id="top"></div>-->
     <!--<div id="links" class="containimage">
       <a href="/techhelp.html"><img src="https://i.imgur.com/05DTvTl.jpg" alt="Links not showing, Sorry! (Tech Tutorials Link)" class="border5"></a>
@@ -374,18 +394,17 @@ background-size: cover;
         window.location.replace("/browse-games.html");
       }
     </script>
-    <div id="img3n"><br><br><br><br><br><br><br><br><br><br><br><p style="text-align:center;" id="img3nt">Tech Tutorials</p><button class="buttongray button5" style="border-radius: 5px;" onclick="redirect1()">Get Started!</button></div>
+    <div id="img3n"><br><br><br><br><br><span id='tutorials'></span><br><br><br><br><br><br><p style="text-align:center;" id="img3nt">Tech Tutorials</p><button class="buttongray button5" style="border-radius: 5px;" onclick="redirect1()">Get Started!</button></div>
     <div id="img2n"><br><br><br><br><br><br><br><br><br><br><br><p style="text-align:center;" id="img2nt">Flight Sim Tutorials</p><button class="buttongray button5" style="border-radius: 5px;" onclick="redirect2()">Get Started!</button></div>
     <div id="img4n"><br><br><br><br><br><br><br><br><br><br><br><p style="text-align:center;" id="img2nt">Games</p><button class="buttongray button5" style="border-radius: 5px;" onclick="redirect3()">Browse Games</button></div><div id='contact'>
     <br>
     <h2>About</h2>
-    <p style='font-size:16px;'><a target='_blank' href='/terms-and-conditions'>Terms and Conditions</a><br><a target='_blank' href='/privacy-policy'>Privacy Policy</a><br><a href='/contact-us'>Contact Us</a><br><a href='/mobilehome.html'>Mobile Home</a></p>
+    <p style='font-size:16px;'><a style='text-decoration:none;' target='_blank' href='/terms-and-conditions'>Terms and Conditions</a><br><a style='text-decoration:none;' target='_blank' href='/privacy-policy'>Privacy Policy</a><br><a style='text-decoration:none;' href='/contact-us'>Contact Us</a><br><a style='text-decoration:none;' href='/mobilehome.html'>Mobile Home</a></p>
     <!--<div class="sharethis-inline-share-buttons"></div><br><br>-->
     <br><br><h2>Visitor Count</h2><br>
     <div align='center'><img src='https://www.free-website-hit-counter.com/c.php?d=9&id=123448&s=5' border='0' alt='Hit counter should be here, but it is not :('><br/></div>
     <!-- AddToAny BEGIN -->
 <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
-  <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
   <a class="a2a_button_facebook"></a>
   <a class="a2a_button_twitter"></a>
   <a class="a2a_button_email"></a>
@@ -393,10 +412,6 @@ background-size: cover;
   <a class="a2a_button_reddit"></a>
   <a class="a2a_button_pinterest"></a>
   <a class="a2a_button_linkedin"></a>
-  <a class="a2a_button_whatsapp"></a>
-  <a class="a2a_button_blogger"></a>
-  <a class="a2a_button_google_classroom"></a>
-  <a class="a2a_button_wordpress"></a>
   <a class="a2a_button_yahoo_mail"></a>
   </div>
   <!-- AddToAny END -->
