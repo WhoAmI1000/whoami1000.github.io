@@ -29,15 +29,6 @@
             #top {
             	font-family:"Copperplate";
             }
-           
-            #images1 {
-                height:1000px;
-            }ctualNotes {
-                height:1000px;
-            }
-            #fccalculator2 {
-                height:1000px;
-            }
             #top {
                 text-align: center;
             }
@@ -315,11 +306,13 @@ background-size: cover;
 .button3 {font-size: 16px;}
 .button4 {font-size: 20px;}
 .button5 {font-size: 24px;}
- 
+.limg{
+  width:95%;
+}
  
 </style>
 </head>
-<body>
+<body onresize="adjustsc()">
 <div id="img1n"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><p id="txt1" style="color:white;">Flight Simulator Tutorials</p></div>
     <!--<div id="top"></div>-->
     <!--<div id="links" class="containimage">
@@ -338,28 +331,28 @@ background-size: cover;
   -->
         <br><br><h1>Flight Simulator Tutorials</h1><br><br><br><br><br><br><br><br><br><br><br><br>
       <br><br>
-      <h1 style='font-size:xx-large'>Browse Tutorials</h1><br><br>
+      <h1 style='font-size:xx-large'>Browse Tutorials</h1><br><br><div id='bt'>
       <!--<div id='containimage'><img src='https://i.ibb.co/ChS6k5D/aircraft-4544819-960-720-1.jpg'><div class='centered'>How to Land in FSX</div></div>-->
       <div class="containimage">
-        <a href="/how-to-land-in-fsx"><img src="https://i.ibb.co/ChS6k5D/aircraft-4544819-960-720-1.jpg" alt="Image of a plane landing (not showing, sorry)", style='border-radius:20px;'></a>
+        <a href="/how-to-land-in-fsx"><img id='limg1' class='limgn' src="https://i.ibb.co/ChS6k5D/aircraft-4544819-960-720-1.jpg" alt="Image of a plane landing (not showing, sorry)", style='border-radius:20px;'></a>
         <div class="centered" style='color:black;'>How to Land in FSX</div>
       </div>
       <div class="containimage">
-        <a href="/which-flight-simulator-should-i-get"><img src="https://i.ibb.co/48ZGL3x/fsximage-1.jpg" alt="Image of fsx scenery (not showing, sorry)", style='border-radius:20px;'></a>
+        <a href="/which-flight-simulator-should-i-get"><img id='limg2' class='limgn' src="https://i.ibb.co/48ZGL3x/fsximage-1.jpg" alt="Image of fsx scenery (not showing, sorry)", style='border-radius:20px;'></a>
         <div class="centered" style='color:white;'>Which Flight Simulator<br>Should You Get?</div>
       </div>
       <div class="containimage">
-        <a href="/how-to-takeoff"><img src="https://i.imgur.com/EVBNP2q.jpg" alt="Image of a plane taking off (not showing, sorry!)", style='border-radius:20px;'></a>
+        <a href="/how-to-takeoff"><img id='limg3' class='limgn' src="https://i.imgur.com/EVBNP2q.jpg" alt="Image of a plane taking off (not showing, sorry!)", style='border-radius:20px;'></a>
         <div class="centered" style='color:white;'>How to Take Off</div>
       </div>
       <div class="containimage">
-        <a href="/intro-to-multiplayer-fs"><img src="https://i.imgur.com/dioBy7u.jpg" alt="Image of a virtual ATC radar (not showing, sorry!)", style='border-radius:20px;'></a>
-        <div class="centered" style='color:white;'>Introduction To Multiplayer<br>Flight Simulators</div>
+        <a href="/intro-to-multiplayer-fs"><img id='limg4' class='limgn' src="https://i.imgur.com/dioBy7u.jpg" alt="Image of a virtual ATC radar (not showing, sorry!)", style='border-radius:20px;'></a>
+        <div class="centered" style='color:white;'>Introduction To Multiplayer<br>FS</div>
       </div>
       <div class="containimage">
-        <a href="/how-to-be-atc-in-multiplayer-fs"><img src="https://imgur.com/NydloO4.jpg" alt="Image of an old ATC tower (not showing, sorry!)", style='border-radius:20px;'></a>
-        <div class="centered" style='color:black;'>Controlling in Multiplayer<br>Flight Simulators</div>
-      </div><br><br>
+        <a href="/how-to-be-atc-in-multiplayer-fs"><img id='limg5' class='limgn' src="https://imgur.com/NydloO4.jpg" alt="Image of an old ATC tower (not showing, sorry!)", style='border-radius:20px;'></a>
+        <div class="centered" style='color:black;'>Controlling in Multiplayer FS</div>
+      </div><br><br></div>
     <br><div id="navbar">
       <ul>
         <li><a href="/index.html">Home</a></li>
@@ -375,6 +368,30 @@ background-size: cover;
         <li></li>
         </ul>
       </div>
+      <script>
+        var adsc;
+        var mobilesettings;
+        var adjustsc = function(){
+      if( window.innerWidth <= 605 ) {
+          mobilesettings = true;}
+          if( window.innerWidth > 605 ) {
+          mobilesettings = false;}
+        if(mobilesettings===true){
+          document.getElementById("limg1").setAttribute("class","limg");
+          document.getElementById("limg2").setAttribute("class","limg");
+          document.getElementById("limg3").setAttribute("class","limg");
+          document.getElementById("limg4").setAttribute("class","limg");
+          document.getElementById("limg5").setAttribute("class","limg");
+        }
+        if(mobilesettings===false){
+          document.getElementById("limg1").setAttribute("class","limgn");
+          document.getElementById("limg2").setAttribute("class","limgn");
+          document.getElementById("limg3").setAttribute("class","limgn");
+          document.getElementById("limg4").setAttribute("class","limgn");
+          document.getElementById("limg5").setAttribute("class","limgn");
+        }}
+        adjustsc();
+      </script>
     <br><br><br><br><br><br><br><br><br><br><br>
     <br>
     <br>
