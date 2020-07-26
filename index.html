@@ -14,11 +14,6 @@
     <html lang="en">
 
     </html>
-    <script>
-        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-            window.location.replace('/mobilehome.html');
-        };
-    </script>
     <script id="mcjs">
         ! function(c, h, i, m, p) {
             m = c.createElement(h), p = c.getElementsByTagName(h)[0], m.async = 1, m.src = i, p.parentNode.insertBefore(m, p)
@@ -416,7 +411,7 @@
     </style>
 </head>
 
-<body>
+<body onresize="cfm()">
     <div id="navbar">
         <ul>
             <li><a href="#top">Home</a></li>
@@ -454,6 +449,22 @@
       <a href="/fsimhelp.html"><img src="https://i.imgur.com/Uz8GAxL.jpg" alt="Links not showing, Sorry! (Flight Simulator Tutorials Link)" class="containimage"></a>
       <div class="centered2">Flight Sim Tutorials</div>
     </div>-->
+    <script>
+        var mobile;
+        var cfm = function() {
+            if (window.innerHeight < 1025) {
+                mobile = true;
+            }
+            if (window.innerHeight >= 1025) {
+                mobile = false;
+            }
+            if (mobile == true) {
+                window.location.replace('/mobilehome');
+            }
+            if (mobile == false) {}
+        };
+        cfm();
+    </script>
     <script>
         function redirect1() {
             window.location.replace("/technology-tutorials.html");
