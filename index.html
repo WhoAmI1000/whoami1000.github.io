@@ -46,6 +46,10 @@
             max-width: 100%;
         }
         
+        #footer {
+            font-size: 18px;
+        }
+        
         #tit {
             font-family: "Copperplate";
         }
@@ -477,44 +481,52 @@
             }
         </script>
         <script>
-            function includeHTML() {
-                var z, i, elmnt, file, xhttp;
-                /*loop through a collection of all HTML elements:*/
-                z = document.getElementsByTagName("*");
-                for (i = 0; i < z.length; i++) {
-                    elmnt = z[i];
-                    /*search for elements with a certain atrribute:*/
-                    file = elmnt.getAttribute("w3-include-html");
-                    if (file) {
-                        /*make an HTTP request using the attribute value as the file name:*/
-                        xhttp = new XMLHttpRequest();
-                        xhttp.onreadystatechange = function() {
-                            if (this.readyState == 4) {
-                                if (this.status == 200) {
-                                    elmnt.innerHTML = this.responseText;
-                                }
-                                if (this.status == 404) {
-                                    elmnt.innerHTML = "Page not found.";
-                                }
-                                /*remove the attribute, and call this function once more:*/
-                                elmnt.removeAttribute("w3-include-html");
-                                includeHTML();
-                            }
-                        }
-                        xhttp.open("GET", file, true);
-                        xhttp.send();
-                        /*exit the function:*/
-                        return;
+            function FadeInSection(props) {
+                const [isVisible, setVisible] = React.useState(true);
+                const domRef = React.useRef();
+                React.useEffect(() => {
+                    const observer = new IntersectionObserver(entries => {
+                        entries.forEach(entry => setVisible(entry.isIntersecting));
+                    });
+                    observer.observe(domRef.current);
+                    return () => observer.unobserve(domRef.current);
+                }, []);
+                return ( <
+                    div className = {
+                        `fade-in-section ${isVisible ? 'is-visible' : ''}`
                     }
-                }
-            };
+                    ref = {
+                        domRef
+                    } >
+                    {
+                        props.children
+                    } <
+                    /div>
+                );
+            }
         </script>
+        <h2>About</h2>
+        <p style='font-size:16px;'><a style='text-decoration:none;' target='_blank' href='/terms-and-conditions'>Terms and Conditions</a><br><a style='text-decoration:none;' target='_blank' href='/privacy-policy'>Privacy Policy</a><br><a style='text-decoration:none;' href='/contact-us'>Contact Us</a><br>
+            <a
+                style='text-decoration:none;' href='/mobilehome.html'>Mobile Home</a>
+        </p>
+        <!--<div class="sharethis-inline-share-buttons"></div><br><br>-->
+        <br><br>
+        <h2>Visitor Count</h2><br>
+        <div align='center'><img src='https://www.free-website-hit-counter.com/c.php?d=9&id=123448&s=5' border='0' alt='Hit counter should be here, but it is not :('><br/></div>
+        <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+            <a class="a2a_button_facebook"></a>
+            <a class="a2a_button_twitter"></a>
+            <a class="a2a_button_email"></a>
+            <a class="a2a_button_google_gmail"></a>
+            <a class="a2a_button_reddit"></a>
+            <a class="a2a_button_pinterest"></a>
+            <a class="a2a_button_linkedin"></a>
+            <a class="a2a_button_yahoo_mail"></a>
+        </div>
+        <!-- AddToAny END -->
+        <script async src="https://static.addtoany.com/menu/page.js"></script>
     </div>
-    <div id='footer' w3-include-html="/footer.html"></div>
-
-    <script>
-        includeHTML();
-    </script>
 </body>
 
 </html>
