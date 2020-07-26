@@ -395,7 +395,7 @@
             <li><a href="#img3n">Tech Tutorials</a></li>
             <li><a href="#img2n">Flight Sim Tutorials</a></li>
             <li><a href="#img4n">Games</a></li>
-            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="/contact-us">Contact Us</a></li>
             <!--<li><div class="dropdown">
     <button class="dropbtn">External Links (Dropdown)
       <i class="fa fa-caret-down"></i>
@@ -409,7 +409,7 @@
         </ul>
     </div>
     <div id="img1n"><br><br><br><br>
-        <h1 id="txt1" , style='font: Verdana;text-align: center;'>CirclR Mobile Home</h1>
+        <h1 id="txt1" , style='font: Verdana;text-align: center;'>CirclR Home</h1>
     </div>
     <!--<div id="top"></div>-->
     <!--<div id="links" class="containimage">
@@ -443,32 +443,45 @@
         <p style="text-align:center;" id="img2nt">Flight Sim Tutorials</p><button class="buttongray button5" style="border-radius: 5px;" onclick="redirect2()">Get Started!</button></div>
     <div id="img4n"><br>
         <p style="text-align:center;" id="img2nt">Games</p><button class="buttongray button5" style="border-radius: 5px;" onclick="redirect3()">Browse Games</button></div>
-    <div id="contact">
-        <br><br>
-        <h2>Contact Us</h2>
-        <p>To contact us, you can email circlrcontact@gmail.com. We will try to respond as soon as we can.</p>
-        <br>
-        <br>
-        <h2>About</h2>
-        <p style='font-size:16px;'><a target='_blank' href='/terms-and-conditions'>Terms and Conditions</a><br><a target='_blank' href='privacy-policy'>Privacy Policy</a></p>
-        <!--<div class="sharethis-inline-share-buttons"></div><br><br>-->
-        <br><br>
-        <h2>Visitor Count</h2><br>
-        <div align='center'><img src='https://www.free-website-hit-counter.com/c.php?d=9&id=123448&s=5' border='0' alt='Hit counter should be here, but it is not :('><br/></div>
-        <!-- AddToAny BEGIN -->
-        <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
-            <a class="a2a_button_facebook"></a>
-            <a class="a2a_button_twitter"></a>
-            <a class="a2a_button_email"></a>
-            <a class="a2a_button_google_gmail"></a>
-            <a class="a2a_button_reddit"></a>
-            <a class="a2a_button_pinterest"></a>
-            <a class="a2a_button_linkedin"></a>
-            <a class="a2a_button_yahoo_mail"></a>
-        </div>
-        <!-- AddToAny END -->
-        <script async src="https://static.addtoany.com/menu/page.js"></script>
+    <script>
+        function includeHTML() {
+            var z, i, elmnt, file, xhttp;
+            /*loop through a collection of all HTML elements:*/
+            z = document.getElementsByTagName("*");
+            for (i = 0; i < z.length; i++) {
+                elmnt = z[i];
+                /*search for elements with a certain atrribute:*/
+                file = elmnt.getAttribute("w3-include-html");
+                if (file) {
+                    /*make an HTTP request using the attribute value as the file name:*/
+                    xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function() {
+                        if (this.readyState == 4) {
+                            if (this.status == 200) {
+                                elmnt.innerHTML = this.responseText;
+                            }
+                            if (this.status == 404) {
+                                elmnt.innerHTML = "Page not found.";
+                            }
+                            /*remove the attribute, and call this function once more:*/
+                            elmnt.removeAttribute("w3-include-html");
+                            includeHTML();
+                        }
+                    }
+                    xhttp.open("GET", file, true);
+                    xhttp.send();
+                    /*exit the function:*/
+                    return;
+                }
+            }
+        };
+    </script>
     </div>
+    <div id='footer' w3-include-html="/footer.html"></div>
+
+    <script>
+        includeHTML();
+    </script>
 </body>
 
 </html>
