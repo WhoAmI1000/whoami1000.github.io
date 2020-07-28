@@ -5,163 +5,188 @@ all credet to them-->
 <!--legal stuff VVV-->
 <!--This work, "KA P.JS", is a derivative of "http://stackoverflow.com/questions/25341597/how-can-khan-academy-computer-programs-be-run-offline-or-on-my-own-website " by Robert Tupelo-Schneck(http://stackoverflow.com/users/394431/robert-tupelo-schneck), used under CC BY. "KA P.JS" is by michael basaj(https://www.khanacademy.org/profile/michaelbasaj/).-->
 <html>
+
 <head>
     <title>RYG Racer v3 | CirclR</title>
-        <link rel="shortcut icon" type="image/png" href="https://i.imgur.com/7BbGspa.png"/>
-        <meta name="msvalidate.01" content="12F10521E33373CD439D3D227103C94E" />
-        <meta name="description" content="Circle R Red Yellow and Green Racer Version 3">
-        <meta name="keywords" content="Circle R, CirclR, CircleR, Website, Technology, Games, game, red yellow green racer, red light green light, racer, RYG light racer, racer, light racer">
-        <meta name="author" content="The CirclR Team">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="language" content="english">
+    <link rel="shortcut icon" type="image/png" href="https://i.imgur.com/7BbGspa.png" />
+    <meta name="msvalidate.01" content="12F10521E33373CD439D3D227103C94E" />
+    <meta name="description" content="Circle R Red Yellow and Green Racer Version 3">
+    <meta name="keywords" content="Circle R, CirclR, CircleR, Website, Technology, Games, game, red yellow green racer, red light green light, racer, RYG light racer, racer, light racer">
+    <meta name="author" content="The CirclR Team">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="language" content="english">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/processing.js/1.4.8/processing.min.js"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-8TW6E2X2QT"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'G-8TW6E2X2QT');
-</script>
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-8TW6E2X2QT');
+    </script>
     <style>
-            #mycanvas {
-      text-align:center;
-    }
-    body {
-        text-align:center;
-    }
-    body {
-                background-color: white;
-                font: Verdana;
-                text-align: center;
-                max-width: 100%;
-            }
-            #tit {
-                font-family: "Copperplate";
-            }
-            
-            #top {
-            	font-family:"Copperplate";
-            }
-           
-            #images1 {
-                height:1000px;
-            }ctualNotes {
-                height:1000px;
-            }
-            #fccalculator2 {
-                height:1000px;
-            }
-            #top {
-                text-align: center;
-            }
-            #about {
-                height: 1000px;
-                background-color:darkgray;
-            }
-            #ta1 {
-            	border-radius: 8px;
-            }
-            #calcsec2 {
-            	border-radius: 8px;
-            }
-            #txt1 {
-              color: white;
-              font-size:100px;
-            }
-            #info {
-              font-family: Arial, Helvetica, sans-serif;
-              font-size:24px;
-            }
-            #weeklynews {
-              font-family: Arial, Helvetica, sans-serif;
-              font-size:18px;
-            }
-            .center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
-            ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  background-color: black;
-  text-decoration-color: white;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  left:0;
-  }
- 
-li {
-  float: left;
-}
-.containimage {
-  position: relative;
-  text-align: center;
-  color: white;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 48px;
-  border-radius: 5%;
-}
-.border5 {
-  border-radius: 5%
-}
-.containimage2 {
-  position: relative;
-  text-align: center;
-  color: white;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 48px;
-}
-
-.bottom-left {
-  position: absolute;
-  bottom: 8px;
-  left: 16px;
-}
-
-.top-left {
-  position: absolute;
-  top: 8px;
-  left: 16px;
-}
-
-.top-right {
-  position: absolute;
-  top: 8px;
-  right: 16px;
-}
-
-.bottom-right {
-  position: absolute;
-  bottom: 8px;
-  right: 16px;
-}
-
-.centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.centered2 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-#img2nt {
-  color:white;
-  font-size: 72px;
-}
-#img3nt {
-  color:white;
-  font-size: 72px;
-}
-/**#showrvalue {
+        #mycanvas {
+            text-align: center;
+        }
+        
+        body {
+            text-align: center;
+        }
+        
+        body {
+            background-color: white;
+            font: Verdana;
+            text-align: center;
+            max-width: 100%;
+        }
+        
+        #tit {
+            font-family: "Copperplate";
+        }
+        
+        #top {
+            font-family: "Copperplate";
+        }
+        
+        #images1 {
+            height: 1000px;
+        }
+        
+        ctualNotes {
+            height: 1000px;
+        }
+        
+        #fccalculator2 {
+            height: 1000px;
+        }
+        
+        #top {
+            text-align: center;
+        }
+        
+        #about {
+            height: 1000px;
+            background-color: darkgray;
+        }
+        
+        #ta1 {
+            border-radius: 8px;
+        }
+        
+        #calcsec2 {
+            border-radius: 8px;
+        }
+        
+        #txt1 {
+            color: white;
+            font-size: 100px;
+        }
+        
+        #info {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 24px;
+        }
+        
+        #weeklynews {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+        }
+        
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+        
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            text-decoration-color: white;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            left: 0;
+        }
+        
+        li {
+            float: left;
+        }
+        
+        .containimage {
+            position: relative;
+            text-align: center;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 48px;
+            border-radius: 5%;
+        }
+        
+        .border5 {
+            border-radius: 5%
+        }
+        
+        .containimage2 {
+            position: relative;
+            text-align: center;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 48px;
+        }
+        
+        .bottom-left {
+            position: absolute;
+            bottom: 8px;
+            left: 16px;
+        }
+        
+        .top-left {
+            position: absolute;
+            top: 8px;
+            left: 16px;
+        }
+        
+        .top-right {
+            position: absolute;
+            top: 8px;
+            right: 16px;
+        }
+        
+        .bottom-right {
+            position: absolute;
+            bottom: 8px;
+            right: 16px;
+        }
+        
+        .centered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .centered2 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        #img2nt {
+            color: white;
+            font-size: 72px;
+        }
+        
+        #img3nt {
+            color: white;
+            font-size: 72px;
+        }
+        /**#showrvalue {
   position: fixed;
   background-color:black;
   display:block;
@@ -171,168 +196,176 @@ li {
   bottom:-2.5%;
   border-top-right-radius: 5%;
 }**/
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-#contact {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size:18px;
-  background-color:rgb(20, 20, 20);
-  color: white;
-}
-li a:hover:not(.active) {
-  background-color: rgb(122, 122, 122);
-}
- 
-#navbar{
-width:14.3%
-}
-#img1 {
-
-    border-radius: 12px;
-    height: 1000px;
-    
-    /*width:100%;*/
-    /*background-size: cover;*/
-    background-repeat: no-repeat;
-}
-body, html {
-  height: 100%;
-  margin: 0;
-}
-.bg {
-  /* The image used */
-  background-image: url("https://p2.piqsels.com/preview/557/741/76/technology-computer-black-code.jpg");
-
-  /* Full height */
-  height: 50%; 
-
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-#img1n {
-  background-image: url("https://p2.piqsels.com/preview/557/741/76/technology-computer-black-code.jpg");
-
-/* Full height */
-height: 100%; 
-
-/* Center and scale the image nicely */
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
-}
-#img2n {
-  background-image: url("https://i.ibb.co/8K8x3q2/air-air-travel-airbus-aircraft-358319.jpg");
-
-/* Full height */
-height: 60%; 
-
-/* Center and scale the image nicely */
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
-}
-#img4n {
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/b/b1/US_Navy_070913-N-1786N-051_Air_Traffic_Controller_2nd_Class_Branden_Powell_keeps_track_of_aircraft_using_a_SPN-43_radar_screen_during_routine_flight_operations_on_board_amphibious_assault_ship_USS_Tarawa_%28LHA_1%29.jpg");
-
-/* Full height */
-height: 60%; 
-
-/* Center and scale the image nicely */
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
-}
-#img3n {
-  background-image: url("https://i.ibb.co/CsPn7Cv/technology-computer-lines-board-50711.jpg");
-
-/* Full height */
-height: 60%; 
-
-/* Center and scale the image nicely */
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
-}
-.container img {
-  width: 100%;
-}
-.dropdown {
-  float: left;
-  overflow: hidden;
-}
-.dropdown .dropbtn {
-  font-size: 16px;  
-  border: none;
-  outline: none;
-  color: white;
-  text-decoration-color:white;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
-}
- 
-.navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: rgb(122, 122, 122);
-}
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: black;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
- 
-.dropdown-content a {
-  float: none;
-  color: white;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
- 
-.dropdown-content a:hover {
-  background-color: rgb(0, 49, 60);
-}
- 
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-.ghighlight {
-    background-color: #E8E8E8;
-}
-.linkimg {
-  border-radius: 5%;
-}
-.buttongray {
-  background-color:gray; /* Gray */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  cursor: pointer;
-}
-
+        
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        
+        #contact {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            background-color: rgb(20, 20, 20);
+            color: white;
+        }
+        
+        li a:hover:not(.active) {
+            background-color: rgb(122, 122, 122);
+        }
+        
+        #navbar {
+            width: 14.3%
+        }
+        
+        #img1 {
+            border-radius: 12px;
+            height: 1000px;
+            /*width:100%;*/
+            /*background-size: cover;*/
+            background-repeat: no-repeat;
+        }
+        
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+        }
+        
+        .bg {
+            /* The image used */
+            background-image: url("https://p2.piqsels.com/preview/557/741/76/technology-computer-black-code.jpg");
+            /* Full height */
+            height: 50%;
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        #img1n {
+            background-image: url("https://p2.piqsels.com/preview/557/741/76/technology-computer-black-code.jpg");
+            /* Full height */
+            height: 100%;
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        #img2n {
+            background-image: url("https://i.ibb.co/8K8x3q2/air-air-travel-airbus-aircraft-358319.jpg");
+            /* Full height */
+            height: 60%;
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        #img4n {
+            background-image: url("https://upload.wikimedia.org/wikipedia/commons/b/b1/US_Navy_070913-N-1786N-051_Air_Traffic_Controller_2nd_Class_Branden_Powell_keeps_track_of_aircraft_using_a_SPN-43_radar_screen_during_routine_flight_operations_on_board_amphibious_assault_ship_USS_Tarawa_%28LHA_1%29.jpg");
+            /* Full height */
+            height: 60%;
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        #img3n {
+            background-image: url("https://i.ibb.co/CsPn7Cv/technology-computer-lines-board-50711.jpg");
+            /* Full height */
+            height: 60%;
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        .container img {
+            width: 100%;
+        }
+        
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+        
+        .dropdown .dropbtn {
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: white;
+            text-decoration-color: white;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+        
+        .navbar a:hover,
+        .dropdown:hover .dropbtn {
+            background-color: rgb(122, 122, 122);
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: black;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+        
+        .dropdown-content a {
+            float: none;
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        
+        .dropdown-content a:hover {
+            background-color: rgb(0, 49, 60);
+        }
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        
+        .ghighlight {
+            background-color: #E8E8E8;
+        }
+        
+        .linkimg {
+            border-radius: 5%;
+        }
+        
+        .buttongray {
+            background-color: gray;
+            /* Gray */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+        }
     </style>
 </head>
+
 <body>
     <div id="navbar">
         <ul>
-          <li><a href="/index.html">Home</a></li>
-          <li><a href="/browse-games">Browse More Games</a></li>
-          <!--<li><div class="dropdown">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/browse-games">Browse More Games</a></li>
+            <!--<li><div class="dropdown">
             <button class="dropbtn">External Links (Dropdown)
               <i class="fa fa-caret-down"></i>
             </button>
@@ -340,10 +373,10 @@ background-size: cover;
               <a target="_blank" href="https://www.instagram.com/iv.aviation.14/">Social Media</a>
             </div>
           </div>-->
-          <li style="float:right"><img class = "active" src="https://i.imgur.com/xX7yL6s.png" alt="(CirclR Logo should be here, but it's not, this is usually a client-side error, we apologize anyways.)"></li>
-          <li></li>
-          </ul>
-        </div><br><br><br><br>
+            <li style="float:right"><img class="active" src="https://i.imgur.com/xX7yL6s.png" alt="(CirclR Logo should be here, but it's not, this is usually a client-side error, we apologize anyways.)"></li>
+            <li></li>
+        </ul>
+    </div><br><br><br><br>
     <h1>Red, Yellow, and Green Racer (v3)</h1>
     <h2>This game is a game that we programmed years ago on Khan Academy.<br>This program was made for a 400x400 canvas. We apologize for the small canvas.</h2><br><br>
     <canvas id="canvas"></canvas>
@@ -352,878 +385,902 @@ background-size: cover;
         var processing = new Processing(canvas, function(processing) {
             processing.size(400, 400);
             processing.background(0xFFF);
-    
+
             var mouseIsPressed = false;
-            processing.mousePressed = function () { mouseIsPressed = true; };
-            processing.mouseReleased = function () { mouseIsPressed = false; };
-    
+            processing.mousePressed = function() {
+                mouseIsPressed = true;
+            };
+            processing.mouseReleased = function() {
+                mouseIsPressed = false;
+            };
+
             var keyIsPressed = false;
-            processing.keyPressed = function () { keyIsPressed = true; };
-            processing.keyReleased = function () { keyIsPressed = false; };
-    
+            processing.keyPressed = function() {
+                keyIsPressed = true;
+            };
+            processing.keyReleased = function() {
+                keyIsPressed = false;
+            };
+
             function getImage(s) {
                 var url = "https://www.kasandbox.org/programming-images/" + s + ".png";
                 processing.externals.sketch.imageCache.add(url);
                 return processing.loadImage(url);
             }
-    
-            with (processing) {
-                
-                
+
+            with(processing) {
+
+
                 // INSERT YOUR KHAN ACADEMY PROGRAM HERE
-/**
- * TRIPLE R:
- *  CIRCLE R(®)
- *   WHOAMI PRODUCTIONS
- *    KAAF
- * Copyright 2018.
- * All Rights Reserved.
- * Credit to Kyle Katarn/Captain Argon and Green Ghost.
- **/
-//Patent Number: UNDEFINED
-/*If your patent numner is undefined, it means you do not have a patent. Not responsible for any loss or damage to yourself from this program. Contains cars. Game Rating: G for having almost nothing fun. Batteries not included.*/
-// IMPORTANT: GREEN GHOST DID THE `SMOOTH` FUNCTION
-// IMPORTANT: KYLE KATARN/Captain Argon DID THE GOOD GRAPHICS, AS UPDATED IN VERSION 2
-/**
- * RED CAR CONTROLS: SPACEBAR
- * BLUE CAR CONTROLS: UP ARROW
- * GREEN CAR CONTROLS: 'W' KEY
- **/
-//Red, Yellow, and Green Racer 3
-//Brought To You By Circle R
-//THIRD VERSION
-//The AIs are random... And the lights.
-//Inspired off of Go Far, my Red Light, Green Light, etc.
-//Messing with any variable pretty much destroys the whole game :O
-//100% Original, I swear. My Red Light, Green Light was flagged for plagerism off of an HTML program made AFTER mine.
-//Here We Go. WARNING: LETHALLY MESSY, CAN CAUSE BRAIN AND HEART FAILURES IF CODE IS LOOKED AT. NOT RESPONSIBLE FOR LOSS OR DAMAGE. IF YOU EXPIRIENCE EITHER ONE, CALL EMERGENCY SERVICES BY DIALING 911 OR YOUR LOCAL EMERGENCY SERVICES NUMBER INTO A PHONE.
-{
-{
-{
-rectMode(CENTER);
-var page = "Home";
-var light = "Green";
-var tl = 0;
-var tOn = false;
-var tFill = 255;
-var racerStroke = 255;
-var nScene;
-var lighttimer;
-var timer = 0;
-var gtimer = 0;
-var ytimer = 0;
-var rtimer = 0;
-var gametime = 3;
-var gt3 = 0;
-var gt2 = 0;
-var gt1 = 0;
-var gamepart = false;
-var beginTimer = {
-    oneFill: 255,
-    oneSize: 200,
-    twoFill: 255,
-    twoSize: 200,
-    threeFill: 255,
-    threeSize: 200,
-};
-var yellowtime = 50;
-var mouse_was_clicked = false;
-var redcar = "AI";
-var bluecar = "P";
-var greencar = "AI";
-var rctimer = 0;
-var bctimer = 0;
-var gctimer = 0;
-var rcoin = 0;
-var gcoin = 0;
-var bcoin = 0;
-var rrun = false;
-var brun = false;
-var grun = false;
-var racerx = -100;
-var redcount = 0;
-var r = true;
-var b = true;
-var g = true;
-var r1 = false;
-var b1 = false;
-var g1 = false;
-var rcarx = 100;
-var bcarx = 200;
-var gcarx = 300;
-var rcary = 350;
-var bcary = 350;
-var gcary = 350;
-var radd = 0;
-var badd = 0;
-var gadd = 0;
-var ccar = "Blue";
-var redcheck = true;
-var rspeed = 1.7;
-var bspeed = 1.7;
-var gspeed = 1.7;
-var lighttcall = true;
-var rtime = 0;
-var ytime = 0;
-var gtime = 0;
-var bp = 0;
-var rp = 0;
-var gp = 0;
-var gi = 0;
-var ro = 0;
-var text1;
-var x1;
-var y1;
-var w1;
-var h1;
-var next1;
-var needed1;
-var view = "Top";
-var ai1r = Math.floor(random(1, 5));
-var ai2r = Math.floor(random(1, 5));
-var ai3r = Math.floor(random(1, 5));
-var ai1 = Math.floor(random(7, 15));
-var ai2 = Math.floor(random(7, 15));
-var ai3 = Math.floor(random(7, 15));
-var redrandom = function() {
-    ai1r = Math.floor(random(1, 5));
-    ai2r = Math.floor(random(1, 5));
-    ai3r = Math.floor(random(1, 5));
-    redcheck = false;
-};
-gtime = Math.floor(random(40, 70));
-ytime = Math.floor(random(40, 70));
-rtime = Math.floor(random(60, 100));
-}//Variable Stuff
-{
-var keymap = new Array(256);
-textAlign(CENTER, CENTER);
-textFont(createFont("Trebuchet MS"));
-for (var i = 0; i <= 256; i++) {
-    keymap[i] = false;
-}
-var cis = false;//This means cursor is over the button
-keyPressed = function() {
-    if (keyCode >= 0 && keyCode <= 255) {
-        keymap[keyCode] = true;
-    }
-};
-keyReleased = function() {
-    if (keyCode >= 0 && keyCode <= 255) {
-        keymap[keyCode] = false;
-    }
-};
-mouseClicked = function() {
-    mouse_was_clicked = true;
-};
-var button = function(Text, x, y, w, h, n, ne) {
-    this.Text = Text;
-    this.x = x;
-    this.y = y;
-    this.w = w;
-    this.h = h;
-    this.next = n;
-    this.needed = ne;
-};
-button.prototype.draw = function() {
-    if (this.needed === page) {
-        if (mouseX >= this.x - this.w / 2 && mouseX <= this.x + this.w / 2 && mouseY >= this.y - this.h / 2 && mouseY <= this.y + this.h / 2) {
-            if (!mouseIsPressed) {
-                cursor(HAND);
-                fill(205);
-            } else {
-                nScene = this.next;
-                tOn = true;
-            }
-        } else {
-            fill(150);
-        }
-        rect(this.x, this.y, this.w, this.h, 5);
-        fill(0);
-        textSize(35);
-        text(this.Text, this.x, this.y);
-    }
-};
-var button1 = function(Text, x, y, w, h, n, ne) {
-    text1 = Text;
-    x1 = x;
-    y1 = y;
-    w1 = w;
-    h1 = h;
-    next1 = n;
-    needed1 = ne;
-};
-button1.prototype.draw = function() {
-    if (needed1 === page) {
-        if (mouseX >= x1 - w1 / 2 && mouseX <= x1 + w1 / 2 && mouseY >= y1 - h1 / 2 && mouseY <= y1 + h1 / 2) {
-            if (!mouseIsPressed) {
-                cursor(HAND);
-                fill(205);
-            } else {
-                nScene = this.next;
-                tOn = true;
-            }
-        } else {
-            fill(150);
-        }
-        rect(x1, y1, w1, h1, 5);
-        fill(0);
-        textSize(35);
-        text(text1, x1, y1);
-    }
-};
-var buttons = [];
-var buttons1 = [];
-}//Non-Draw-Function 'Other' Section
-{
-buttons.push(new button("Begin!", 200, 345, 120, 50, "Help", "Home"));
-buttons.push(new button("Okay!", 200, 365, 100, 50, "Switch", "Help"));
-buttons.push(new button("D\nO\nN\nE", 42.5, 185, 55, 170, "Preplay", "Switch"));
-buttons.push(new button("Garage", 200, 345, 145, 50, "Switch", "Rwin"));
-buttons.push(new button("Restart", 200, 285, 145, 50, "Preplay", "Rwin"));
-buttons.push(new button("Garage", 200, 345, 145, 50, "Switch", "Bwin"));
-buttons.push(new button("Restart", 200, 285, 145, 50, "Preplay", "Bwin"));
-buttons.push(new button("Garage", 200, 345, 145, 50, "Switch", "Gwin"));
-buttons.push(new button("Restart", 200, 285, 145, 50, "Preplay", "Gwin"));
-buttons.push(new button("S\nH\nO\nP", 350, 185, 50, 170, "Shop", "Switch"));
-buttons.push(new button("Red Speed", 100, 100, 170, 50, "rbuy", "Shop"));
-buttons.push(new button("Blue Speed", 100, 200, 170, 50, "rbuy", "Shop"));
-buttons.push(new button("Green Speed", 110, 300, 200, 50, "rbuy", "Shop"));
-buttons.push(new button("Back", 200, 260, 100, 50, "Switch", "nocoin"));
-buttons.push(new button("Back", 200, 360, 100, 50, "Switch", "Shop"));
-}//Buttons
-{
-}//Buttons V2
-var Smooth = function(pos1, pos2, div) {
-    return (pos2 - pos1) / div;
-};//Thanks, Green Ghost!
-}//Non-Draw Function Code
-{
-draw = function() {
-    {
-    cursor(ARROW);
-    if(keymap[32] && redcar === "P" && page === "Play") {
-        rcary-= rspeed + radd;
-        rspeed += 0.01;
-        radd += 0.0001;
-        if (light !== "Red") {
-            brun = true;
-        }
-        if(light === "Red") {
-            rcary = 350;
-        }
-    }
-    else{rspeed = 1;}
-    if(keymap[38] && bluecar === "P" && page === "Play") {
-        bcary-= bspeed + badd;
-        bspeed += 0.01;
-        badd += 0.0001;
-        if (light !== "Red") {
-            brun = true;
-        }
-        if(light === "Red") {
-            bcary = 350;
-        }
-    }
-    else{bspeed = 1 + badd;}
-    if(keymap[87] && greencar === "P" && page === "Play") {
-        gcary-= gspeed + gadd;
-        gspeed += 0.01;
-        gadd += 0.0001;
-        if (light !== "Red") {
-            brun = true;
-        }
-        if(light === "Red") {
-            gcary = 350;
-        }
-    }
-    else{gspeed = 1;}
-    if(keymap[40]) {
-        if(ccar === "Blue") {
-            badd = 5;
-        }
-        else{}
-    }
-    if(keymap[17]) {
-        if(ccar === "Red") {
-            radd = 5;
-        }
-    }
-    if(keymap[83]) {
-        if(ccar === "Green") {
-            gadd = 5;
-        }
-    }
-    if(keymap[66]) {
-        ccar = "Blue";
-    }
-    if(keymap[71]) {
-        ccar = "Green";
-    }
-    if(keymap[82]) {
-        ccar = "Red";
-    }
-    }//User Interaction Stuff
-    {
-    if(page === "Home") {
-        background(50, 200, 50);
-        pushMatrix();
-        fill(0, 0, 0, tl);
-        textSize(200);
-        text("3", 200, 200);
-        tl += 2;
-        popMatrix();
-        fill(0);
-        textSize(36);
-        textFont(createFont("Trebuchet MS"));
-        text("Red, Yellow, and Green", 200, 20);
-        textSize(50);
-        if (racerStroke > 50) {
-            textFont(createFont("Trebuchet MS Italic"));
-        }
-        text("Racer", racerx, 60);
-        if (racerx < 317 && tFill <= 0) {
-            racerx += Smooth(racerx, 317, 10);
-        }
-        if (racerx >= 110) {
-            racerStroke -= 5;
-        }
-        // 317
-        stroke(0, 0, 0, racerStroke);
-        strokeWeight(5);
-        pushMatrix();
-        translate(racerx - 317, 0);
-        line(20, 45, 250, 45);
-        line(20, 60, 247, 60);
-        line(20, 75, 244, 75);
-        popMatrix();
-        noStroke();
-        textFont(createFont("Trebuchet MS"));
-        textSize(25);
-        //button(140, 320, 120, 50, 5, "Help", "Begin!");
-        buttons[0].draw();
-    }
-    else if(page === "Preplay") {
-        background(135, 214, 152);
-        gi = 200;
-        redcount = 0;
-        noStroke();
-        fill(145);
-        rect(37.5, 100.5, 60, 180, 5);
-        rect(362.5, 100.5, 60, 180, 5);
-        fill(8, 117, 21);
-        ellipse(37.5, 45.5, 45, 45);
-        ellipse(362.5, 45.5, 45, 45);
-        fill(207, 185, 19);
-        ellipse(37.5, 100.5, 45, 45);
-        ellipse(362.5, 100.5, 45, 45);
-        fill(179, 2, 2);
-        ellipse(37.5, 155.5, 45, 45);
-        ellipse(362.5, 155.5, 45, 45);
-        image(getImage("cute/TreeTall"), 5, 250, 60, 90);
-                fill(125);
-        rect(100, 200, 50, 400);
-        rect(200, 200, 50, 400);
-        rect(300, 200, 50, 400);
-                        fill(255);
-        rect(100, 350, 10, 40, 2);
-        rect(100, 280, 10, 40, 2);
-        rect(100, 210, 10, 40, 2);
-        rect(100, 140, 10, 40, 2);
-        rect(100, 70, 10, 40, 2);
-        rect(100, 0, 10, 40, 2);
-                fill(255);
-        rect(200, 350, 10, 40, 2);
-        rect(200, 280, 10, 40, 2);
-        rect(200, 210, 10, 40, 2);
-        rect(200, 140, 10, 40, 2);
-        rect(200, 70, 10, 40, 2);
-        rect(200, 0, 10, 40, 2);
-                fill(255);
-        rect(300, 350, 10, 40, 2);
-        rect(300, 280, 10, 40, 2);
-        rect(300, 210, 10, 40, 2);
-        rect(300, 140, 10, 40, 2);
-        rect(300, 70, 10, 40, 2);
-        rect(300, 0, 10, 40, 2);
-        fill(255, 0, 0);
-        rect(100, 350, 30, 30, 5);
-        fill(0, 0, 255);
-        rect(200, 350, 30, 30, 5);
-        fill(0, 255, 0);
-        rect(300, 350, 30, 30, 5);
-        fill(255, 255, 255, 200);
-        textSize(400);
-        text(gametime, 198, 190);
-        if(gametime === 3) {
-            gt1++;
-            gt2 = 0;
-            gt3 = 0;
-            if(gt1 > 45) {
-                gametime = 2;
-            }
-        }
-        if(gametime === 2) {
-            gt2++;
-            gt1 = 0;
-            gt3 = 0;
-            if(gt2 > 45) {
-                gametime = 1;
-            }
-        }
-        if(gametime === 1) {
-            gt3++;
-            gt1 = 0;
-            gt2 = 0;
-            if(gt3 > 45) {
-                page = "Play";
-            }
-        }
-    }
-    else if(page === "Play") {
-        gametime = 3;
-        if (!keymap[32] && redcar === "P") {
-            rrun = false;
-        }
-        if (!keymap[38] && bluecar === "P") {
-            brun = false;
-        }
-        if (!keymap[87] && greencar === "P") {
-            grun = false;
-        }
-        background(135, 214, 152);
-        noStroke();
-        fill(145);
-        rect(37.5, 100.5, 60, 180, 5);
-        rect(362.5, 100.5, 60, 180, 5);
-        fill(8, 117, 21);
-        ellipse(37.5, 45.5, 45, 45);
-        ellipse(362.5, 45.5, 45, 45);
-        fill(207, 185, 19);
-        ellipse(37.5, 100.5, 45, 45);
-        ellipse(362.5, 100.5, 45, 45);
-        fill(179, 2, 2);
-        ellipse(37.5, 155.5, 45, 45);
-        ellipse(362.5, 155.5, 45, 45);
-        image(getImage("cute/TreeTall"), 5, 250, 60, 90);
-        if(light === "Green") {
-            gtimer++;
-                        fill(54, 186, 67);
-                    ellipse(37.5, 45.5, 45, 45);
-        ellipse(362.5, 45.5, 45, 45);
-            if(redcar === "AI") {
-                rctimer++;
-                if(rctimer > ai1 + 10) {
-                rcary-= rspeed + random(0.01, 1);
-                rspeed+= 0.01;
-                rrun = true;
-                }
-            }
-            if(bluecar === "AI") {
-                if(rctimer > ai2 + 10) {
-                bcary-= bspeed + random(0.01, 1);
-                bspeed += 0.01;
-                brun = true;
-                }
-            }
-            if(greencar === "AI") {
-                if(rctimer > ai3 + 10) {
-                gcary-= gspeed + random(0.01, 1);
-                gspeed =+ 0.01;
-                grun = true;
-                }
-            }
-            if(gtimer > gtime) {
-                rtimer = 0;
-                redcheck = true;
-                light = "Yellow";
-            }
-        }
-        if(light === "Yellow") {
-            ytimer++;
-                        fill(255, 221, 0);
-            ellipse(37.5, 100.5, 45, 45);
-        ellipse(362.5, 100.5, 45, 45);
-            if(redcar === "AI") {
-                rcary-= rspeed + random(0.01, 1);
-                rrun = true;
-            }
-            if(bluecar === "AI") {
-                bcary-= bspeed + random(0.01, 1);
-                brun = true;
-            }
-            if(greencar === "AI") {
-                gcary-= gspeed + random(0.01, 1);
-                grun = true;
-            }
+                /**
+                 * TRIPLE R:
+                 *  CIRCLE R(®)
+                 *   WHOAMI PRODUCTIONS
+                 *    KAAF
+                 * Copyright 2018.
+                 * All Rights Reserved.
+                 * Credit to Kyle Katarn/Captain Argon and Green Ghost.
+                 **/
+                //Patent Number: UNDEFINED
+                /*If your patent numner is undefined, it means you do not have a patent. Not responsible for any loss or damage to yourself from this program. Contains cars. Game Rating: G for having almost nothing fun. Batteries not included.*/
+                // IMPORTANT: GREEN GHOST DID THE `SMOOTH` FUNCTION
+                // IMPORTANT: KYLE KATARN/Captain Argon DID THE GOOD GRAPHICS, AS UPDATED IN VERSION 2
+                /**
+                 * RED CAR CONTROLS: SPACEBAR
+                 * BLUE CAR CONTROLS: UP ARROW
+                 * GREEN CAR CONTROLS: 'W' KEY
+                 **/
+                //Red, Yellow, and Green Racer 3
+                //Brought To You By Circle R
+                //THIRD VERSION
+                //The AIs are random... And the lights.
+                //Inspired off of Go Far, my Red Light, Green Light, etc.
+                //Messing with any variable pretty much destroys the whole game :O
+                //100% Original, I swear. My Red Light, Green Light was flagged for plagerism off of an HTML program made AFTER mine.
+                //Here We Go. WARNING: LETHALLY MESSY, CAN CAUSE BRAIN AND HEART FAILURES IF CODE IS LOOKED AT. NOT RESPONSIBLE FOR LOSS OR DAMAGE. IF YOU EXPIRIENCE EITHER ONE, CALL EMERGENCY SERVICES BY DIALING 911 OR YOUR LOCAL EMERGENCY SERVICES NUMBER INTO A PHONE.
+                {
+                    {
+                        {
+                            rectMode(CENTER);
+                            var page = "Home";
+                            var light = "Green";
+                            var tl = 0;
+                            var tOn = false;
+                            var tFill = 255;
+                            var racerStroke = 255;
+                            var nScene;
+                            var lighttimer;
+                            var timer = 0;
+                            var gtimer = 0;
+                            var ytimer = 0;
+                            var rtimer = 0;
+                            var gametime = 3;
+                            var gt3 = 0;
+                            var gt2 = 0;
+                            var gt1 = 0;
+                            var gamepart = false;
+                            var beginTimer = {
+                                oneFill: 255,
+                                oneSize: 200,
+                                twoFill: 255,
+                                twoSize: 200,
+                                threeFill: 255,
+                                threeSize: 200,
+                            };
+                            var yellowtime = 50;
+                            var mouse_was_clicked = false;
+                            var redcar = "AI";
+                            var bluecar = "P";
+                            var greencar = "AI";
+                            var rctimer = 0;
+                            var bctimer = 0;
+                            var gctimer = 0;
+                            var rcoin = 0;
+                            var gcoin = 0;
+                            var bcoin = 0;
+                            var rrun = false;
+                            var brun = false;
+                            var grun = false;
+                            var racerx = -100;
+                            var redcount = 0;
+                            var r = true;
+                            var b = true;
+                            var g = true;
+                            var r1 = false;
+                            var b1 = false;
+                            var g1 = false;
+                            var rcarx = 100;
+                            var bcarx = 200;
+                            var gcarx = 300;
+                            var rcary = 350;
+                            var bcary = 350;
+                            var gcary = 350;
+                            var radd = 0;
+                            var badd = 0;
+                            var gadd = 0;
+                            var ccar = "Blue";
+                            var redcheck = true;
+                            var rspeed = 1.7;
+                            var bspeed = 1.7;
+                            var gspeed = 1.7;
+                            var lighttcall = true;
+                            var rtime = 0;
+                            var ytime = 0;
+                            var gtime = 0;
+                            var bp = 0;
+                            var rp = 0;
+                            var gp = 0;
+                            var gi = 0;
+                            var ro = 0;
+                            var text1;
+                            var x1;
+                            var y1;
+                            var w1;
+                            var h1;
+                            var next1;
+                            var needed1;
+                            var view = "Top";
+                            var ai1r = Math.floor(random(1, 5));
+                            var ai2r = Math.floor(random(1, 5));
+                            var ai3r = Math.floor(random(1, 5));
+                            var ai1 = Math.floor(random(7, 15));
+                            var ai2 = Math.floor(random(7, 15));
+                            var ai3 = Math.floor(random(7, 15));
+                            var redrandom = function() {
+                                ai1r = Math.floor(random(1, 5));
+                                ai2r = Math.floor(random(1, 5));
+                                ai3r = Math.floor(random(1, 5));
+                                redcheck = false;
+                            };
+                            gtime = Math.floor(random(40, 70));
+                            ytime = Math.floor(random(40, 70));
+                            rtime = Math.floor(random(60, 100));
+                        } //Variable Stuff
+                        {
+                            var keymap = new Array(256);
+                            textAlign(CENTER, CENTER);
+                            textFont(createFont("Trebuchet MS"));
+                            for (var i = 0; i <= 256; i++) {
+                                keymap[i] = false;
+                            }
+                            var cis = false; //This means cursor is over the button
+                            keyPressed = function() {
+                                if (keyCode >= 0 && keyCode <= 255) {
+                                    keymap[keyCode] = true;
+                                }
+                            };
+                            keyReleased = function() {
+                                if (keyCode >= 0 && keyCode <= 255) {
+                                    keymap[keyCode] = false;
+                                }
+                            };
+                            mouseClicked = function() {
+                                mouse_was_clicked = true;
+                            };
+                            var button = function(Text, x, y, w, h, n, ne) {
+                                this.Text = Text;
+                                this.x = x;
+                                this.y = y;
+                                this.w = w;
+                                this.h = h;
+                                this.next = n;
+                                this.needed = ne;
+                            };
+                            button.prototype.draw = function() {
+                                if (this.needed === page) {
+                                    if (mouseX >= this.x - this.w / 2 && mouseX <= this.x + this.w / 2 && mouseY >= this.y - this.h / 2 && mouseY <= this.y + this.h / 2) {
+                                        if (!mouseIsPressed) {
+                                            cursor(HAND);
+                                            fill(205);
+                                        } else {
+                                            nScene = this.next;
+                                            tOn = true;
+                                        }
+                                    } else {
+                                        fill(150);
+                                    }
+                                    rect(this.x, this.y, this.w, this.h, 5);
+                                    fill(0);
+                                    textSize(35);
+                                    text(this.Text, this.x, this.y);
+                                }
+                            };
+                            var button1 = function(Text, x, y, w, h, n, ne) {
+                                text1 = Text;
+                                x1 = x;
+                                y1 = y;
+                                w1 = w;
+                                h1 = h;
+                                next1 = n;
+                                needed1 = ne;
+                            };
+                            button1.prototype.draw = function() {
+                                if (needed1 === page) {
+                                    if (mouseX >= x1 - w1 / 2 && mouseX <= x1 + w1 / 2 && mouseY >= y1 - h1 / 2 && mouseY <= y1 + h1 / 2) {
+                                        if (!mouseIsPressed) {
+                                            cursor(HAND);
+                                            fill(205);
+                                        } else {
+                                            nScene = this.next;
+                                            tOn = true;
+                                        }
+                                    } else {
+                                        fill(150);
+                                    }
+                                    rect(x1, y1, w1, h1, 5);
+                                    fill(0);
+                                    textSize(35);
+                                    text(text1, x1, y1);
+                                }
+                            };
+                            var buttons = [];
+                            var buttons1 = [];
+                        } //Non-Draw-Function 'Other' Section
+                        {
+                            buttons.push(new button("Begin!", 200, 345, 120, 50, "Help", "Home"));
+                            buttons.push(new button("Okay!", 200, 365, 100, 50, "Switch", "Help"));
+                            buttons.push(new button("D\nO\nN\nE", 42.5, 185, 55, 170, "Preplay", "Switch"));
+                            buttons.push(new button("Garage", 200, 345, 145, 50, "Switch", "Rwin"));
+                            buttons.push(new button("Restart", 200, 285, 145, 50, "Preplay", "Rwin"));
+                            buttons.push(new button("Garage", 200, 345, 145, 50, "Switch", "Bwin"));
+                            buttons.push(new button("Restart", 200, 285, 145, 50, "Preplay", "Bwin"));
+                            buttons.push(new button("Garage", 200, 345, 145, 50, "Switch", "Gwin"));
+                            buttons.push(new button("Restart", 200, 285, 145, 50, "Preplay", "Gwin"));
+                            buttons.push(new button("S\nH\nO\nP", 350, 185, 50, 170, "Shop", "Switch"));
+                            buttons.push(new button("Red Speed", 100, 100, 170, 50, "rbuy", "Shop"));
+                            buttons.push(new button("Blue Speed", 100, 200, 170, 50, "rbuy", "Shop"));
+                            buttons.push(new button("Green Speed", 110, 300, 200, 50, "rbuy", "Shop"));
+                            buttons.push(new button("Back", 200, 260, 100, 50, "Switch", "nocoin"));
+                            buttons.push(new button("Back", 200, 360, 100, 50, "Switch", "Shop"));
+                        } //Buttons
+                        {} //Buttons V2
+                        var Smooth = function(pos1, pos2, div) {
+                            return (pos2 - pos1) / div;
+                        }; //Thanks, Green Ghost!
+                    } //Non-Draw Function Code
+                    {
+                        draw = function() {
+                            {
+                                cursor(ARROW);
+                                if (keymap[32] && redcar === "P" && page === "Play") {
+                                    rcary -= rspeed + radd;
+                                    rspeed += 0.01;
+                                    radd += 0.0001;
+                                    if (light !== "Red") {
+                                        brun = true;
+                                    }
+                                    if (light === "Red") {
+                                        rcary = 350;
+                                    }
+                                } else {
+                                    rspeed = 1;
+                                }
+                                if (keymap[38] && bluecar === "P" && page === "Play") {
+                                    bcary -= bspeed + badd;
+                                    bspeed += 0.01;
+                                    badd += 0.0001;
+                                    if (light !== "Red") {
+                                        brun = true;
+                                    }
+                                    if (light === "Red") {
+                                        bcary = 350;
+                                    }
+                                } else {
+                                    bspeed = 1 + badd;
+                                }
+                                if (keymap[87] && greencar === "P" && page === "Play") {
+                                    gcary -= gspeed + gadd;
+                                    gspeed += 0.01;
+                                    gadd += 0.0001;
+                                    if (light !== "Red") {
+                                        brun = true;
+                                    }
+                                    if (light === "Red") {
+                                        gcary = 350;
+                                    }
+                                } else {
+                                    gspeed = 1;
+                                }
+                                if (keymap[40]) {
+                                    if (ccar === "Blue") {
+                                        badd = 5;
+                                    } else {}
+                                }
+                                if (keymap[17]) {
+                                    if (ccar === "Red") {
+                                        radd = 5;
+                                    }
+                                }
+                                if (keymap[83]) {
+                                    if (ccar === "Green") {
+                                        gadd = 5;
+                                    }
+                                }
+                                if (keymap[66]) {
+                                    ccar = "Blue";
+                                }
+                                if (keymap[71]) {
+                                    ccar = "Green";
+                                }
+                                if (keymap[82]) {
+                                    ccar = "Red";
+                                }
+                            } //User Interaction Stuff
+                            {
+                                if (page === "Home") {
+                                    background(50, 200, 50);
+                                    pushMatrix();
+                                    fill(0, 0, 0, tl);
+                                    textSize(200);
+                                    text("3", 200, 200);
+                                    tl += 2;
+                                    popMatrix();
+                                    fill(0);
+                                    textSize(36);
+                                    textFont(createFont("Trebuchet MS"));
+                                    text("Red, Yellow, and Green", 200, 20);
+                                    textSize(50);
+                                    if (racerStroke > 50) {
+                                        textFont(createFont("Trebuchet MS Italic"));
+                                    }
+                                    text("Racer", racerx, 60);
+                                    if (racerx < 317 && tFill <= 0) {
+                                        racerx += Smooth(racerx, 317, 10);
+                                    }
+                                    if (racerx >= 110) {
+                                        racerStroke -= 5;
+                                    }
+                                    // 317
+                                    stroke(0, 0, 0, racerStroke);
+                                    strokeWeight(5);
+                                    pushMatrix();
+                                    translate(racerx - 317, 0);
+                                    line(20, 45, 250, 45);
+                                    line(20, 60, 247, 60);
+                                    line(20, 75, 244, 75);
+                                    popMatrix();
+                                    noStroke();
+                                    textFont(createFont("Trebuchet MS"));
+                                    textSize(25);
+                                    //button(140, 320, 120, 50, 5, "Help", "Begin!");
+                                    buttons[0].draw();
+                                } else if (page === "Preplay") {
+                                    background(135, 214, 152);
+                                    gi = 200;
+                                    redcount = 0;
+                                    noStroke();
+                                    fill(145);
+                                    rect(37.5, 100.5, 60, 180, 5);
+                                    rect(362.5, 100.5, 60, 180, 5);
+                                    fill(8, 117, 21);
+                                    ellipse(37.5, 45.5, 45, 45);
+                                    ellipse(362.5, 45.5, 45, 45);
+                                    fill(207, 185, 19);
+                                    ellipse(37.5, 100.5, 45, 45);
+                                    ellipse(362.5, 100.5, 45, 45);
+                                    fill(179, 2, 2);
+                                    ellipse(37.5, 155.5, 45, 45);
+                                    ellipse(362.5, 155.5, 45, 45);
+                                    image(getImage("cute/TreeTall"), 5, 250, 60, 90);
+                                    fill(125);
+                                    rect(100, 200, 50, 400);
+                                    rect(200, 200, 50, 400);
+                                    rect(300, 200, 50, 400);
+                                    fill(255);
+                                    rect(100, 350, 10, 40, 2);
+                                    rect(100, 280, 10, 40, 2);
+                                    rect(100, 210, 10, 40, 2);
+                                    rect(100, 140, 10, 40, 2);
+                                    rect(100, 70, 10, 40, 2);
+                                    rect(100, 0, 10, 40, 2);
+                                    fill(255);
+                                    rect(200, 350, 10, 40, 2);
+                                    rect(200, 280, 10, 40, 2);
+                                    rect(200, 210, 10, 40, 2);
+                                    rect(200, 140, 10, 40, 2);
+                                    rect(200, 70, 10, 40, 2);
+                                    rect(200, 0, 10, 40, 2);
+                                    fill(255);
+                                    rect(300, 350, 10, 40, 2);
+                                    rect(300, 280, 10, 40, 2);
+                                    rect(300, 210, 10, 40, 2);
+                                    rect(300, 140, 10, 40, 2);
+                                    rect(300, 70, 10, 40, 2);
+                                    rect(300, 0, 10, 40, 2);
+                                    fill(255, 0, 0);
+                                    rect(100, 350, 30, 30, 5);
+                                    fill(0, 0, 255);
+                                    rect(200, 350, 30, 30, 5);
+                                    fill(0, 255, 0);
+                                    rect(300, 350, 30, 30, 5);
+                                    fill(255, 255, 255, 200);
+                                    textSize(400);
+                                    text(gametime, 198, 190);
+                                    if (gametime === 3) {
+                                        gt1++;
+                                        gt2 = 0;
+                                        gt3 = 0;
+                                        if (gt1 > 45) {
+                                            gametime = 2;
+                                        }
+                                    }
+                                    if (gametime === 2) {
+                                        gt2++;
+                                        gt1 = 0;
+                                        gt3 = 0;
+                                        if (gt2 > 45) {
+                                            gametime = 1;
+                                        }
+                                    }
+                                    if (gametime === 1) {
+                                        gt3++;
+                                        gt1 = 0;
+                                        gt2 = 0;
+                                        if (gt3 > 45) {
+                                            page = "Play";
+                                        }
+                                    }
+                                } else if (page === "Play") {
+                                    gametime = 3;
+                                    if (!keymap[32] && redcar === "P") {
+                                        rrun = false;
+                                    }
+                                    if (!keymap[38] && bluecar === "P") {
+                                        brun = false;
+                                    }
+                                    if (!keymap[87] && greencar === "P") {
+                                        grun = false;
+                                    }
+                                    background(135, 214, 152);
+                                    noStroke();
+                                    fill(145);
+                                    rect(37.5, 100.5, 60, 180, 5);
+                                    rect(362.5, 100.5, 60, 180, 5);
+                                    fill(8, 117, 21);
+                                    ellipse(37.5, 45.5, 45, 45);
+                                    ellipse(362.5, 45.5, 45, 45);
+                                    fill(207, 185, 19);
+                                    ellipse(37.5, 100.5, 45, 45);
+                                    ellipse(362.5, 100.5, 45, 45);
+                                    fill(179, 2, 2);
+                                    ellipse(37.5, 155.5, 45, 45);
+                                    ellipse(362.5, 155.5, 45, 45);
+                                    image(getImage("cute/TreeTall"), 5, 250, 60, 90);
+                                    if (light === "Green") {
+                                        gtimer++;
+                                        fill(54, 186, 67);
+                                        ellipse(37.5, 45.5, 45, 45);
+                                        ellipse(362.5, 45.5, 45, 45);
+                                        if (redcar === "AI") {
+                                            rctimer++;
+                                            if (rctimer > ai1 + 10) {
+                                                rcary -= rspeed + random(0.01, 1);
+                                                rspeed += 0.01;
+                                                rrun = true;
+                                            }
+                                        }
+                                        if (bluecar === "AI") {
+                                            if (rctimer > ai2 + 10) {
+                                                bcary -= bspeed + random(0.01, 1);
+                                                bspeed += 0.01;
+                                                brun = true;
+                                            }
+                                        }
+                                        if (greencar === "AI") {
+                                            if (rctimer > ai3 + 10) {
+                                                gcary -= gspeed + random(0.01, 1);
+                                                gspeed = +0.01;
+                                                grun = true;
+                                            }
+                                        }
+                                        if (gtimer > gtime) {
+                                            rtimer = 0;
+                                            redcheck = true;
+                                            light = "Yellow";
+                                        }
+                                    }
+                                    if (light === "Yellow") {
+                                        ytimer++;
+                                        fill(255, 221, 0);
+                                        ellipse(37.5, 100.5, 45, 45);
+                                        ellipse(362.5, 100.5, 45, 45);
+                                        if (redcar === "AI") {
+                                            rcary -= rspeed + random(0.01, 1);
+                                            rrun = true;
+                                        }
+                                        if (bluecar === "AI") {
+                                            bcary -= bspeed + random(0.01, 1);
+                                            brun = true;
+                                        }
+                                        if (greencar === "AI") {
+                                            gcary -= gspeed + random(0.01, 1);
+                                            grun = true;
+                                        }
 
-            if(ytimer > ytime) {
-                gtimer = 0;
-                light = "Red";
-            }
-        }
-        if(light === "Red") {
-            rtimer++;
-            fill(255, 0, 0);
-                    ellipse(37.5, 155.5, 45, 45);
-        ellipse(362.5, 155.5, 45, 45);
-            if(redcheck){
-            redrandom();}
-            if(ai1r === 3 || ai1r === 2) {
-                if(redcar === "AI") {
-                    rcary = 350;
-                }
-            }
-            if(ai2r === 3 || ai2r === 2) {
-                if(bluecar === "AI") {
-                    bcary = 350;
-                }
-            }
-            if(ai3r === 3 || ai2r === 2) {
-                if(greencar === "AI") {
-                    gcary = 350;
-                }
-            }
-            fill(255, 0, 0);
-            if(rtimer > rtime) {
-                ytimer = 0;
-                redcount++;
-                light = "Green";
-            }
-            rrun = false;
-            brun = false;
-            grun = false;
-        }
-        //ellipse(37.5, 37.5, 40, 40);
-        //ellipse(362.5, 37.5, 40, 40);
-        fill(125);
-        rect(100, 200, 50, 400);
-        rect(200, 200, 50, 400);
-        rect(300, 200, 50, 400);
-        fill(255);
-        rect(100, 350, 10, 40, 2);
-        rect(100, 280, 10, 40, 2);
-        rect(100, 210, 10, 40, 2);
-        rect(100, 140, 10, 40, 2);
-        rect(100, 70, 10, 40, 2);
-        rect(100, 0, 10, 40, 2);
-                fill(255);
-        rect(200, 350, 10, 40, 2);
-        rect(200, 280, 10, 40, 2);
-        rect(200, 210, 10, 40, 2);
-        rect(200, 140, 10, 40, 2);
-        rect(200, 70, 10, 40, 2);
-        rect(200, 0, 10, 40, 2);
-                fill(255);
-        rect(300, 350, 10, 40, 2);
-        rect(300, 280, 10, 40, 2);
-        rect(300, 210, 10, 40, 2);
-        rect(300, 140, 10, 40, 2);
-        rect(300, 70, 10, 40, 2);
-        rect(300, 0, 10, 40, 2);
-        //rect(
-        stroke(200, 0, 0);
-        strokeWeight(10);
-        if (rrun) {
-            line(100 + 8, rcary, 100 + 5, rcary + sin(frameCount * 5) * 25);
-            line(100 - 8, rcary, 100 - 5, rcary - sin(frameCount * 5) * 25);
-        }
-        noStroke();
-        stroke(0, 200, 0);
-        strokeWeight(10);
-        if (grun) {
-            line(300 + 8, gcary, 300 + 5, gcary + sin(frameCount * 5) * 25);
-            line(300 - 8, gcary, 300 - 5, gcary - sin(frameCount * 5) * 25);
-        }
-        noStroke();
-        stroke(0, 0, 200);
-        strokeWeight(10);
-        if (brun) {
-            line(200 + 8, bcary, 200 + 5, bcary + sin(frameCount * 5) * 25);
-            line(200 - 8, bcary, 200 - 5, bcary - sin(frameCount * 5) * 25);
-        }
-        noStroke();
-        fill(255, 0, 0);
-        rect(100, rcary, 30, 30, 5);
-        fill(0, 0, 255);
-        rect(200, bcary, 30, 30, 5);
-        fill(0, 255, 0);
-        rect(300, gcary, 30, 30, 5);
-        rcarx = rcary;
-        bcarx = bcary;
-        gcarx = gcary;
-        if(rcary < 0) {
-            rcoin++;
-            if(redcount < 1) {
-                radd = 0;
-                page = "Rwin";
-            }
-            page = "Rwin";
-            background(255, 0, 0);
-        }
-        if(bcary < 0) {
-            bcoin++;
-                        if(redcount < 1) {
-                badd = 0;
-                page = "Bwin";
-            }
-            page = "Bwin";
-            background(0, 0, 255);
-        }
-        if(gcary < 0) {
-            gcoin++;
-                        if(redcount < 1) {
-                gadd = 0;
-                page = "Gwin";
-            }
-            page = "Gwin";
-            background(0, 255, 0);
-        }
-                fill(255, 255, 255, gi);
-        textSize(300);
-        text("Go!", 198, 180);
-        gi-= 2;
-    }
-    else if(page === "Rwin") {
-        background(255, 0, 0);
-textSize(30);
-        fill(0);
-        text("Red Car Wins!\n\nPress 'Restart' to\nplay again. Thanks\nfor playing!", 200, 120);
-                bcary = 350;
-        rcary = 350;
-                gtimer = 0;
-        rtimer = 0;
-        ytimer = 0;
-        light = "Green";
-        gcary = 350;
-                buttons[3].draw();
-                buttons[4].draw();
-    }
-    else if(page === "Bwin") {
-        background(0, 0, 255);
-textSize(30);
-        fill(0);
-        bcary = 350;
-        rcary = 350;
-        gcary = 350;
-        light = "Green";
-        text("Blue Car Wins!\n\nPress 'Restart' to\nplay again. Thanks\nfor playing!", 200, 120);
-        bp = 1;        gtimer = 0;
-        rtimer = 0;
-        ytimer = 0;
-        buttons[5].draw();
-        buttons[6].draw();
-    }
-    else if(page === "Gwin") {
-        background(0, 255, 0);
-                textSize(30);
-                light = "Green";
-        fill(0);
-        text("Green Car Wins!\n\nPress 'Restart' to\nplay again. Thanks\nfor playing!", 200, 120);
-        button(120, 320, 145, 50, 5, "Switch", "Garage");
-        button(120, 260, 145, 50, 5, "next", "Restart");        
-        bcary = 350;
-        rcary = 350;
-        gcary = 350;
-        gtimer = 0;
-        rtimer = 0;
-        ytimer = 0;
-        buttons[7].draw();
-        buttons[8].draw();
-    }
-    else if(page === "next") {
-        page = "Play";
-    }
-    else if(page === "Help"){
-        background(135, 214, 152);
-        textSize(50);
-        fill(0);
-        text("What is this?", 200, 50);
-        textSize(25);
-        text("Welcome! On the next page,\nyou will find more help. You\nwill have to have fast and \nquick reactions and luck to beat \nthis. Green light means go, \nYellow means red is coming \nsoon, and Red is stop. You accelerate over time.\nGood Luck!", 0, 0, 400, 400);
-        //button(150, 340, 85, 50, 5, "Switch", "Ok!");
-        buttons[1].draw();
-    }
-    else if(page === "Switch") {
-        background(135, 214, 152);
-        //button(20, 100, 55, 170, 5, "Play", "D\nO\nN\nE");
-        buttons[2].draw();
-        buttons[9].draw();
-        textSize(50);
-        fill(0, 0, 0);
-        text("AI and Player", 200, 30);
-        text("Garage", 200, 80);
-        textSize(20);
-        text("Red Controls: SPACE BAR\nBlue Controls: UP ARROW\nGreen Controls: W KEY\n\nClick on the squares to \nswitch them between AI\nand Player. P = Player,\nAI = Well, AI!", 200, 210);
-        if (mouseX > 75 && mouseX < 125 && mouseY > 325 && mouseY < 375) {
-            fill(255, 0, 0);
-            cursor(HAND);
-        } else {
-            fill(200, 0, 0);
-        }
-        rect(100, 350, 50, 50, 5);
-        if (mouseX > 175 && mouseX < 225 && mouseY > 325 && mouseY < 375) {
-            fill(0, 0, 255);
-            cursor(HAND);
-        } else {
-            fill(0, 0, 200);
-        }
-        rect(200, 350, 50, 50, 5);
-        if (mouseX > 275 && mouseX < 325 && mouseY > 325 && mouseY < 375) {
-            fill(0, 255, 0);
-            cursor(HAND);
-        } else {
-            fill(0, 200, 0);
-        }
-        rect(300, 350, 50, 50, 5);
-        fill(0);
-        text(redcar, 100, 360);
-        text(bluecar, 200, 360);
-        text(greencar, 300, 360);
-        fill(255, 0, 0);
-        rect(200, 335, 50, 10, 0);
-        fill(0, 0, 255);
-        rect(100, 335, 50, 10);
-        fill(131, 230, 151);
-        rect(300, 335, 50, 10);
-        if(r === false) {
-            r1++;
-            if(r1 > 20) {
-               r = true;
-               r1 = 0;
-            }
-        }
-        if(b === false) {
-            b1++;
-            if(b1 > 20) {
-               b = true;
-               b1 = 0;
-            }
-        }
-        if(g === false) {
-            g1++;
-            if(g1 > 20) {
-               g = true;
-               g1 = 0;
-            }
-        }
-        if(mouseIsPressed && mouseX > 75 && mouseX < 125 && mouseY > 325 && mouseY < 375 && r) {
-            if(redcar === "AI" ) {
-                redcar = "P";
-                r = false;
-            }
-            else{redcar = "AI"; r = false;}
-        }    if(mouseIsPressed && mouseX > 175 && mouseX < 225 && mouseY > 325 && mouseY < 375 && b) {
-        if(bluecar === "AI" ) {
-            bluecar = "P";
-            b = false;
-        }
-        else{bluecar = "AI"; b = false;}
-    }
-        if(mouseIsPressed && mouseX > 275 && mouseX < 325 && mouseY > 325 && mouseY < 375 && g) {
-        if(greencar === "AI" ) {
-            greencar = "P";
-            g = false;
-        }
-        else{greencar = "AI"; g = false;}
-    }
-    }
-    else if(page === "Shop") {
-        background(120, 155, 255);
-        fill(0);
-        textSize(35);
-        text("Local Shop", 190, 50);
-        buttons[10].draw();
-        buttons[11].draw();
-        buttons[12].draw();
-        buttons[14].draw();
-        textSize(25);
-        text("More \ncoming soon!\nLives, boosts,\nnew tracks,\nperspectives,\nand hacks\ncoming soon!", 300, 200);
+                                        if (ytimer > ytime) {
+                                            gtimer = 0;
+                                            light = "Red";
+                                        }
+                                    }
+                                    if (light === "Red") {
+                                        rtimer++;
+                                        fill(255, 0, 0);
+                                        ellipse(37.5, 155.5, 45, 45);
+                                        ellipse(362.5, 155.5, 45, 45);
+                                        if (redcheck) {
+                                            redrandom();
+                                        }
+                                        if (ai1r === 3 || ai1r === 2) {
+                                            if (redcar === "AI") {
+                                                rcary = 350;
+                                            }
+                                        }
+                                        if (ai2r === 3 || ai2r === 2) {
+                                            if (bluecar === "AI") {
+                                                bcary = 350;
+                                            }
+                                        }
+                                        if (ai3r === 3 || ai2r === 2) {
+                                            if (greencar === "AI") {
+                                                gcary = 350;
+                                            }
+                                        }
+                                        fill(255, 0, 0);
+                                        if (rtimer > rtime) {
+                                            ytimer = 0;
+                                            redcount++;
+                                            light = "Green";
+                                        }
+                                        rrun = false;
+                                        brun = false;
+                                        grun = false;
+                                    }
+                                    //ellipse(37.5, 37.5, 40, 40);
+                                    //ellipse(362.5, 37.5, 40, 40);
+                                    fill(125);
+                                    rect(100, 200, 50, 400);
+                                    rect(200, 200, 50, 400);
+                                    rect(300, 200, 50, 400);
+                                    fill(255);
+                                    rect(100, 350, 10, 40, 2);
+                                    rect(100, 280, 10, 40, 2);
+                                    rect(100, 210, 10, 40, 2);
+                                    rect(100, 140, 10, 40, 2);
+                                    rect(100, 70, 10, 40, 2);
+                                    rect(100, 0, 10, 40, 2);
+                                    fill(255);
+                                    rect(200, 350, 10, 40, 2);
+                                    rect(200, 280, 10, 40, 2);
+                                    rect(200, 210, 10, 40, 2);
+                                    rect(200, 140, 10, 40, 2);
+                                    rect(200, 70, 10, 40, 2);
+                                    rect(200, 0, 10, 40, 2);
+                                    fill(255);
+                                    rect(300, 350, 10, 40, 2);
+                                    rect(300, 280, 10, 40, 2);
+                                    rect(300, 210, 10, 40, 2);
+                                    rect(300, 140, 10, 40, 2);
+                                    rect(300, 70, 10, 40, 2);
+                                    rect(300, 0, 10, 40, 2);
+                                    //rect(
+                                    stroke(200, 0, 0);
+                                    strokeWeight(10);
+                                    if (rrun) {
+                                        line(100 + 8, rcary, 100 + 5, rcary + sin(frameCount * 5) * 25);
+                                        line(100 - 8, rcary, 100 - 5, rcary - sin(frameCount * 5) * 25);
+                                    }
+                                    noStroke();
+                                    stroke(0, 200, 0);
+                                    strokeWeight(10);
+                                    if (grun) {
+                                        line(300 + 8, gcary, 300 + 5, gcary + sin(frameCount * 5) * 25);
+                                        line(300 - 8, gcary, 300 - 5, gcary - sin(frameCount * 5) * 25);
+                                    }
+                                    noStroke();
+                                    stroke(0, 0, 200);
+                                    strokeWeight(10);
+                                    if (brun) {
+                                        line(200 + 8, bcary, 200 + 5, bcary + sin(frameCount * 5) * 25);
+                                        line(200 - 8, bcary, 200 - 5, bcary - sin(frameCount * 5) * 25);
+                                    }
+                                    noStroke();
+                                    fill(255, 0, 0);
+                                    rect(100, rcary, 30, 30, 5);
+                                    fill(0, 0, 255);
+                                    rect(200, bcary, 30, 30, 5);
+                                    fill(0, 255, 0);
+                                    rect(300, gcary, 30, 30, 5);
+                                    rcarx = rcary;
+                                    bcarx = bcary;
+                                    gcarx = gcary;
+                                    if (rcary < 0) {
+                                        rcoin++;
+                                        if (redcount < 1) {
+                                            radd = 0;
+                                            page = "Rwin";
+                                        }
+                                        page = "Rwin";
+                                        background(255, 0, 0);
+                                    }
+                                    if (bcary < 0) {
+                                        bcoin++;
+                                        if (redcount < 1) {
+                                            badd = 0;
+                                            page = "Bwin";
+                                        }
+                                        page = "Bwin";
+                                        background(0, 0, 255);
+                                    }
+                                    if (gcary < 0) {
+                                        gcoin++;
+                                        if (redcount < 1) {
+                                            gadd = 0;
+                                            page = "Gwin";
+                                        }
+                                        page = "Gwin";
+                                        background(0, 255, 0);
+                                    }
+                                    fill(255, 255, 255, gi);
+                                    textSize(300);
+                                    text("Go!", 198, 180);
+                                    gi -= 2;
+                                } else if (page === "Rwin") {
+                                    background(255, 0, 0);
+                                    textSize(30);
+                                    fill(0);
+                                    text("Red Car Wins!\n\nPress 'Restart' to\nplay again. Thanks\nfor playing!", 200, 120);
+                                    bcary = 350;
+                                    rcary = 350;
+                                    gtimer = 0;
+                                    rtimer = 0;
+                                    ytimer = 0;
+                                    light = "Green";
+                                    gcary = 350;
+                                    buttons[3].draw();
+                                    buttons[4].draw();
+                                } else if (page === "Bwin") {
+                                    background(0, 0, 255);
+                                    textSize(30);
+                                    fill(0);
+                                    bcary = 350;
+                                    rcary = 350;
+                                    gcary = 350;
+                                    light = "Green";
+                                    text("Blue Car Wins!\n\nPress 'Restart' to\nplay again. Thanks\nfor playing!", 200, 120);
+                                    bp = 1;
+                                    gtimer = 0;
+                                    rtimer = 0;
+                                    ytimer = 0;
+                                    buttons[5].draw();
+                                    buttons[6].draw();
+                                } else if (page === "Gwin") {
+                                    background(0, 255, 0);
+                                    textSize(30);
+                                    light = "Green";
+                                    fill(0);
+                                    text("Green Car Wins!\n\nPress 'Restart' to\nplay again. Thanks\nfor playing!", 200, 120);
+                                    button(120, 320, 145, 50, 5, "Switch", "Garage");
+                                    button(120, 260, 145, 50, 5, "next", "Restart");
+                                    bcary = 350;
+                                    rcary = 350;
+                                    gcary = 350;
+                                    gtimer = 0;
+                                    rtimer = 0;
+                                    ytimer = 0;
+                                    buttons[7].draw();
+                                    buttons[8].draw();
+                                } else if (page === "next") {
+                                    page = "Play";
+                                } else if (page === "Help") {
+                                    background(135, 214, 152);
+                                    textSize(50);
+                                    fill(0);
+                                    text("What is this?", 200, 50);
+                                    textSize(25);
+                                    text("Welcome! On the next page,\nyou will find more help. You\nwill have to have fast and \nquick reactions and luck to beat \nthis. Green light means go, \nYellow means red is coming \nsoon, and Red is stop. You accelerate over time.\nGood Luck!", 0, 0, 400, 400);
+                                    //button(150, 340, 85, 50, 5, "Switch", "Ok!");
+                                    buttons[1].draw();
+                                } else if (page === "Switch") {
+                                    background(135, 214, 152);
+                                    //button(20, 100, 55, 170, 5, "Play", "D\nO\nN\nE");
+                                    buttons[2].draw();
+                                    buttons[9].draw();
+                                    textSize(50);
+                                    fill(0, 0, 0);
+                                    text("AI and Player", 200, 30);
+                                    text("Garage", 200, 80);
+                                    textSize(20);
+                                    text("Red Controls: SPACE BAR\nBlue Controls: UP ARROW\nGreen Controls: W KEY\n\nClick on the squares to \nswitch them between AI\nand Player. P = Player,\nAI = Well, AI!", 200, 210);
+                                    if (mouseX > 75 && mouseX < 125 && mouseY > 325 && mouseY < 375) {
+                                        fill(255, 0, 0);
+                                        cursor(HAND);
+                                    } else {
+                                        fill(200, 0, 0);
+                                    }
+                                    rect(100, 350, 50, 50, 5);
+                                    if (mouseX > 175 && mouseX < 225 && mouseY > 325 && mouseY < 375) {
+                                        fill(0, 0, 255);
+                                        cursor(HAND);
+                                    } else {
+                                        fill(0, 0, 200);
+                                    }
+                                    rect(200, 350, 50, 50, 5);
+                                    if (mouseX > 275 && mouseX < 325 && mouseY > 325 && mouseY < 375) {
+                                        fill(0, 255, 0);
+                                        cursor(HAND);
+                                    } else {
+                                        fill(0, 200, 0);
+                                    }
+                                    rect(300, 350, 50, 50, 5);
+                                    fill(0);
+                                    text(redcar, 100, 360);
+                                    text(bluecar, 200, 360);
+                                    text(greencar, 300, 360);
+                                    fill(255, 0, 0);
+                                    rect(200, 335, 50, 10, 0);
+                                    fill(0, 0, 255);
+                                    rect(100, 335, 50, 10);
+                                    fill(131, 230, 151);
+                                    rect(300, 335, 50, 10);
+                                    if (r === false) {
+                                        r1++;
+                                        if (r1 > 20) {
+                                            r = true;
+                                            r1 = 0;
+                                        }
+                                    }
+                                    if (b === false) {
+                                        b1++;
+                                        if (b1 > 20) {
+                                            b = true;
+                                            b1 = 0;
+                                        }
+                                    }
+                                    if (g === false) {
+                                        g1++;
+                                        if (g1 > 20) {
+                                            g = true;
+                                            g1 = 0;
+                                        }
+                                    }
+                                    if (mouseIsPressed && mouseX > 75 && mouseX < 125 && mouseY > 325 && mouseY < 375 && r) {
+                                        if (redcar === "AI") {
+                                            redcar = "P";
+                                            r = false;
+                                        } else {
+                                            redcar = "AI";
+                                            r = false;
+                                        }
+                                    }
+                                    if (mouseIsPressed && mouseX > 175 && mouseX < 225 && mouseY > 325 && mouseY < 375 && b) {
+                                        if (bluecar === "AI") {
+                                            bluecar = "P";
+                                            b = false;
+                                        } else {
+                                            bluecar = "AI";
+                                            b = false;
+                                        }
+                                    }
+                                    if (mouseIsPressed && mouseX > 275 && mouseX < 325 && mouseY > 325 && mouseY < 375 && g) {
+                                        if (greencar === "AI") {
+                                            greencar = "P";
+                                            g = false;
+                                        } else {
+                                            greencar = "AI";
+                                            g = false;
+                                        }
+                                    }
+                                } else if (page === "Shop") {
+                                    background(120, 155, 255);
+                                    fill(0);
+                                    textSize(35);
+                                    text("Local Shop", 190, 50);
+                                    buttons[10].draw();
+                                    buttons[11].draw();
+                                    buttons[12].draw();
+                                    buttons[14].draw();
+                                    textSize(25);
+                                    text("More \ncoming soon!\nLives, boosts,\nnew tracks,\nperspectives,\nand hacks\ncoming soon!", 300, 200);
 
-    }
-    else if(page === "rbuy") {
-        if(rcoin > 1) {
-            rcoin -= 2;
-            radd += 0.3;
-            page = "Shop";
-        }
-        else {
-            page = "nocoin";
-        }
-    }
-    else if(page === "bbuy") {
-        if(bcoin > 1) {
-            bcoin -= 2;
-            badd += 0.3;
-            page = "Shop";
-        }
-        else {
-            page = "nocoin";
-        }
-    }
-    else if(page === "gbuy") {
-        if(gcoin > 1) {
-            gcoin -= 2;
-            gadd += 0.3;
-            page = "Shop";
-        }
-        else {
-            page = "nocoin";
-        }
-    }
-    else if(page === "nocoin") {
-        background(255, 0, 0);
-        fill(255);
-        text("Not enough red, green,\nor blue coins!", 200, 50);
-        buttons[13].draw();
-    }
-    else{throw{message: "The variable page is not defined. Make sure you used caps at the begginning of the variable and match the button linking to the page with the page. It's case sensetive!"};}
-    }//Pages
-    {
-    if (tOn && tFill <= 255) {
-        tFill += 5;
-    }
-    if (tOn && tFill >= 255) {
-        page = nScene;
-        tOn = false;
-    }
-    if (!tOn && tFill > 0) {
-        tFill -= 5;
-    }
-    fill(0, 0, 0, tFill);
-    noStroke();
-    rect(200, 200, 400, 400);}//Other
-};
-}//Draw Function
-}//All Code. Do not tamper with unless you are willing to get sick from the messiness.
-//Way more code than the first and second versions, don't you think?
-                
-                
+                                } else if (page === "rbuy") {
+                                    if (rcoin > 1) {
+                                        rcoin -= 2;
+                                        radd += 0.3;
+                                        page = "Shop";
+                                    } else {
+                                        page = "nocoin";
+                                    }
+                                } else if (page === "bbuy") {
+                                    if (bcoin > 1) {
+                                        bcoin -= 2;
+                                        badd += 0.3;
+                                        page = "Shop";
+                                    } else {
+                                        page = "nocoin";
+                                    }
+                                } else if (page === "gbuy") {
+                                    if (gcoin > 1) {
+                                        gcoin -= 2;
+                                        gadd += 0.3;
+                                        page = "Shop";
+                                    } else {
+                                        page = "nocoin";
+                                    }
+                                } else if (page === "nocoin") {
+                                    background(255, 0, 0);
+                                    fill(255);
+                                    text("Not enough red, green,\nor blue coins!", 200, 50);
+                                    buttons[13].draw();
+                                } else {
+                                    throw {
+                                        message: "The variable page is not defined. Make sure you used caps at the begginning of the variable and match the button linking to the page with the page. It's case sensetive!"
+                                    };
+                                }
+                            } //Pages
+                            {
+                                if (tOn && tFill <= 255) {
+                                    tFill += 5;
+                                }
+                                if (tOn && tFill >= 255) {
+                                    page = nScene;
+                                    tOn = false;
+                                }
+                                if (!tOn && tFill > 0) {
+                                    tFill -= 5;
+                                }
+                                fill(0, 0, 0, tFill);
+                                noStroke();
+                                rect(200, 200, 400, 400);
+                            } //Other
+                        };
+                    } //Draw Function
+                } //All Code. Do not tamper with unless you are willing to get sick from the messiness.
+                //Way more code than the first and second versions, don't you think?
+
+
             }
             if (typeof draw !== 'undefined') processing.draw = draw;
         });
-    </script><br><p>NOTE: There are some easter eggs that give you insane boosts!</p>
-    <p style='font-size:16px;'><a target='_blank' href='https://www.termsandconditionsgenerator.com/live.php?token=OeCDYKcre1TBDhkSSchnr115oSHuw6br'>Terms and Conditions</a><br><a target='_blank' href='https://www.privacypolicygenerator.info/live.php?token=z3B8OwdimQZm4ByTdrN2YhabLcOf69xJ'>Privacy Policy</a></p>
-    <!--<div class="sharethis-inline-share-buttons"></div><br><br>-->
-    <br><br><h2>Visitor Count</h2><br>
-    <div align='center'><img src='https://www.free-website-hit-counter.com/c.php?d=9&id=123448&s=5' border='0' alt='Hit counter should be here, but it is not :('><br/></div>
-    <!-- AddToAny BEGIN -->
-<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
-  <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
-  <a class="a2a_button_facebook"></a>
-  <a class="a2a_button_twitter"></a>
-  <a class="a2a_button_email"></a>
-  <a class="a2a_button_google_gmail"></a>
-  <a class="a2a_button_reddit"></a>
-  <a class="a2a_button_pinterest"></a>
-  <a class="a2a_button_linkedin"></a>
-  <a class="a2a_button_whatsapp"></a>
-  <a class="a2a_button_blogger"></a>
-  <a class="a2a_button_google_classroom"></a>
-  <a class="a2a_button_wordpress"></a>
-  <a class="a2a_button_yahoo_mail"></a>
-  </div>
-  <!-- AddToAny END -->
-    <script async src="https://static.addtoany.com/menu/page.js"></script>
+    </script><br>
+    <p>NOTE: There are some easter eggs that give you insane boosts!</p>
+    <script>
+        function includeHTML() {
+            var z, i, elmnt, file, xhttp;
+            /*loop through a collection of all HTML elements:*/
+            z = document.getElementsByTagName("*");
+            for (i = 0; i < z.length; i++) {
+                elmnt = z[i];
+                /*search for elements with a certain atrribute:*/
+                file = elmnt.getAttribute("w3-include-html");
+                if (file) {
+                    /*make an HTTP request using the attribute value as the file name:*/
+                    xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function() {
+                        if (this.readyState == 4) {
+                            if (this.status == 200) {
+                                elmnt.innerHTML = this.responseText;
+                            }
+                            if (this.status == 404) {
+                                elmnt.innerHTML = "Page not found.";
+                            }
+                            /*remove the attribute, and call this function once more:*/
+                            elmnt.removeAttribute("w3-include-html");
+                            includeHTML();
+                        }
+                    }
+                    xhttp.open("GET", file, true);
+                    xhttp.send();
+                    /*exit the function:*/
+                    return;
+                }
+            }
+        };
+    </script>
+    <div id='footer' w3-include-html="/footer.html"></div>
+
+    <script>
+        includeHTML();
+    </script>
 </body>
+
 </html>
