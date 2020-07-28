@@ -455,11 +455,11 @@
     </style>
 </head>
 
-<body onresize="adjustccc()">
+<body onresize="adjustsc()">
     <script>
         /*if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-                                                                                                                                            var mobile = true;
-                                                                                                                                          }*/
+                                                                                                                                                    var mobile = true;
+                                                                                                                                                  }*/
     </script>
     <div id="navbar">
         <ul>
@@ -507,20 +507,7 @@
             <br></div>
         <script>
             var mobilesettings;
-            var adjustscc = function() {
-                if (window.innerWidth <= 605) {
-                    mobilesettings = true;
-                }
-                if (window.innerWidth > 605) {
-                    mobilesettings = false;
-                }
-                if (mobilesettings === true) {
-                    document.getElementById("limg1").setAttribute("class", "limg");
-                }
-                if (mobilesettings === false) {
-                    document.getElementById("limg1").setAttribute("class", "limgn");
-                }
-            }
+            var adjustscc = function() {}
             adjustsc();
         </script>
         <script>
@@ -543,6 +530,18 @@
                 }
                 if (mobile === 'middle') {
                     document.getElementById("articlee").setAttribute("class", "articlemiddle");
+                }
+                if (window.innerWidth <= 605) {
+                    mobilesettings = true;
+                }
+                if (window.innerWidth > 605) {
+                    mobilesettings = false;
+                }
+                if (mobilesettings === true) {
+                    document.getElementById("limg1").setAttribute("class", "limg");
+                }
+                if (mobilesettings === false) {
+                    document.getElementById("limg1").setAttribute("class", "limgn");
                 }
             }
             adjustsc();
