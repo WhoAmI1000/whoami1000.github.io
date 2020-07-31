@@ -470,31 +470,44 @@
         adjustsc();
     </script>
     <br><br><br><br><br><br><br><br><br><br><br>
-    <br>
-    <br>
-    <p style='font-size:16px;'><a target='_blank' href='https://www.termsandconditionsgenerator.com/live.php?token=OeCDYKcre1TBDhkSSchnr115oSHuw6br'>Terms and Conditions</a><br><a target='_blank' href='https://www.privacypolicygenerator.info/live.php?token=z3B8OwdimQZm4ByTdrN2YhabLcOf69xJ'>Privacy Policy</a></p>
-    <br><br>
-    <h2>Visitor Count</h2><br>
-    <div align='center'><img src='https://www.free-website-hit-counter.com/c.php?d=9&id=123448&s=5' border='0' alt='Hit counter should be here, but it is not :('><br/></div>
-    <!-- AddToAny BEGIN -->
-    <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
-        <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
-        <a class="a2a_button_facebook"></a>
-        <a class="a2a_button_twitter"></a>
-        <a class="a2a_button_email"></a>
-        <a class="a2a_button_google_gmail"></a>
-        <a class="a2a_button_reddit"></a>
-        <a class="a2a_button_pinterest"></a>
-        <a class="a2a_button_linkedin"></a>
-        <a class="a2a_button_whatsapp"></a>
-        <a class="a2a_button_blogger"></a>
-        <a class="a2a_button_google_classroom"></a>
-        <a class="a2a_button_wordpress"></a>
-        <a class="a2a_button_yahoo_mail"></a>
-    </div>
-    <!-- AddToAny END -->
-    <script async src="https://static.addtoany.com/menu/page.js"></script>
-    </div>
+    <script>
+        function includeHTML() {
+            var z, i, elmnt, file, xhttp;
+            /*loop through a collection of all HTML elements:*/
+            z = document.getElementsByTagName("*");
+            for (i = 0; i < z.length; i++) {
+                elmnt = z[i];
+                /*search for elements with a certain atrribute:*/
+                file = elmnt.getAttribute("w3-include-html");
+                if (file) {
+                    /*make an HTTP request using the attribute value as the file name:*/
+                    xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function() {
+                        if (this.readyState == 4) {
+                            if (this.status == 200) {
+                                elmnt.innerHTML = this.responseText;
+                            }
+                            if (this.status == 404) {
+                                elmnt.innerHTML = "Page not found.";
+                            }
+                            /*remove the attribute, and call this function once more:*/
+                            elmnt.removeAttribute("w3-include-html");
+                            includeHTML();
+                        }
+                    }
+                    xhttp.open("GET", file, true);
+                    xhttp.send();
+                    /*exit the function:*/
+                    return;
+                }
+            }
+        };
+    </script>
+    <div id='footer' w3-include-html="/footer.html"></div>
+
+    <script>
+        includeHTML();
+    </script>
 </body>
 
 </html>
