@@ -245,7 +245,7 @@
         }
         
         #img1n {
-            background-image: url("https://p2.piqsels.com/preview/557/741/76/technology-computer-black-code.jpg");
+            background-image: url("https://i.ibb.co/DVdjmBK/programming-3652497-1280-1.webp");
             /* Full height */
             height: 100%;
             background-attachment: fixed;
@@ -256,23 +256,27 @@
         }
         
         #img2n {
-            background-image: url("https://i.ibb.co/8K8x3q2/air-air-travel-airbus-aircraft-358319.jpg");
+            background-image: url("https://i.ibb.co/xfWQ06b/air-air-travel-airbus-aircraft-358319.webp");
             /* Full height */
             height: 60%;
             /* Center and scale the image nicely */
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
+            padding-top: 175px;
+            padding-bottom: 175px;
         }
         
         #img3n {
-            background-image: url("https://i.ibb.co/CsPn7Cv/technology-computer-lines-board-50711.jpg");
+            background-image: url("https://i.ibb.co/qN0ZNXS/technology-computer-lines-board-50711-1.webp");
             /* Full height */
             height: 60%;
             /* Center and scale the image nicely */
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
+            padding-top: 175px;
+            padding-bottom: 175px;
         }
         
         .container img {
@@ -391,6 +395,10 @@
             font-size: 24px;
         }
         
+        .button5:hover {
+            background-color: rgb(100, 100, 100);
+        }
+        
         #sp {
             font-family: "Times New Roman", Times, serif;
             font-size: 48px;
@@ -419,10 +427,12 @@
             <li></li>
         </ul>
     </div>
-    <div id="img1n"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-        <h1 id="txt1" style='font-family:"Times New Roman", Times, Serif;text-align: center;'>CirclR</h1><br>
-        <div class='fademe' id='cd1'>
-            <p id='sp'>Technology Tutorials.<br>Flight Simulator Tutorials.</p><a class='buttongraym' href='#tutorials'>Tutorials</a></div>
+    <div id='img1n' style='display:table; width:100%;'>
+        <div style='display:table-cell; width:100%;'><br><br><br><br>
+            <h1 id="txt1" style='font-family:"Times New Roman", Times, Serif;text-align: center;'>CirclR</h1><br>
+            <div class='fademe' id='cd1'>
+                <p id='sp'>Technology Tutorials.<br>Flight Simulator Tutorials.</p><a class='buttongraym' href='#tutorials'>Tutorials</a></div>
+        </div>
     </div>
     <!--<div id="top"></div>-->
     <!--<div id="links" class="containimage">
@@ -446,9 +456,7 @@
             if (window.innerHeight >= 1025) {
                 mobile = false;
             }
-            if (mobile == true) {
-                window.location.replace('/mobilehome');
-            }
+            if (mobile == true) {}
             if (mobile == false) {}
         };
         cfm();
@@ -462,10 +470,15 @@
             window.location.replace("/flight-sim-tutorials.html");
         }
     </script><noscript><h2>Please enable JavaScript for Circlertech.com to work properly.</h2></noscript>
-    <div id="img3n"><br><br><br><br><br><span id='tutorials'></span><br><br><br><br><br><br>
-        <p style="text-align:center;" id="img3nt">Tech Tutorials</p><button class="buttongray button5" style="border-radius: 5px;" onclick="redirect1()">Get Started!</button></div>
-    <div id="img2n"><br><br><br><br><br><br><br><br><br><br><br>
-        <p style="text-align:center;" id="img2nt">Flight Sim Tutorials</p><button class="buttongray button5" style="border-radius: 5px;" onclick="redirect2()">Get Started!</button></div>
+    <div id='ttim' style='display:table; width:100%;'>
+        <div id="img2n" style='display:table-cell; width:100%;'>
+            <p style="text-align:center;" id="img2nt">Flight Sim Tutorials</p><a class='buttongray button5' style='border-radius:5px;' href='/flight-sim-tutorials'>Get Started!</a></div>
+    </div>
+    <div id='ttim' style='display:table; width:100%;'>
+        <div id="img3n" style='display:table-cell; width:100%;'>
+            <p style="text-align:center;" id="img3nt">Tech Tutorials</p><a class='buttongray button5' style='border-radius:5px;' href='/technology-tutorials'>Get Started!</a></div>
+    </div>
+
     <div id='contact'>
         <script>
             window.onload = function() {
