@@ -399,6 +399,7 @@ img {
     max-width: 100%;
     padding-left: 5px;
     padding-right: 5px;
+    color: whitesmoke;
 }
 
 pre {
@@ -409,7 +410,6 @@ pre {
     white-space: -o-pre-wrap;
     word-wrap: break-word;
     font-size: 16px;
-    color: whitesmoke;
 }
 
 code {
