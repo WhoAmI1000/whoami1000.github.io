@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf8">
+    <title>Working with Discord OAUTH2 | CirclR</title>
+    <link rel="shortcut icon" type="image/png" href="https://i.imgur.com/7BbGspa.png" />
+    <meta name="description" content="Using Discord OAuth2 in Node.js | Circle R">
+    <meta name="keywords" content="Circle R, CirclR, CircleR, discord oauth2, discord oauth, how to use discord oauth, oauth2, oauth, nodejs, node.js, how to use discord oauth2 in nodejs">
+    <meta name="author" content="The CirclR Team">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Abhaya Libre' rel='stylesheet'>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8TW6E2X2QT"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-8TW6E2X2QT');
+    </script>
+    <link rel='stylesheet' href='/tech-articles.css'>
+</head>
+
+<body onresize="adjustccc()">
+    <script>
+        /*if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            var mobile = true;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          }*/
+    </script>
+    <div id="navbar">
+        <ol class="nb">
+            <li style='float: left;'><a href="/index.html">Home</a></li>
+            <li style='float: left;'><a href="/technology-tutorials">More Tech Tutorials</a></li>
+            <li style="float:right"><img class="active" src="https://i.imgur.com/xX7yL6s.png" alt="(CirclR Logo should be here, but it's not, this is usually a client-side error, we apologize anyways.)"></li>
+            <li></li>
+        </ol>
+    </div>
+    <div id="img1n"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <p id="txt1" style="color:white;">Working With Discord OAUTH2</p>
+    </div>
+    <div id="contact">
+        <br><br>
+        <h1>Using Discord OAUTH2</h1><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br>
+        <div id='tocd'>
+            <div id='tableofcontents' class='sticky'>
+                <h3>Table of Contents</h3><br><br>
+                <p>1. <a href='#articlee' style='text-decoration:none;'>Introduction</a><br>2. <a href='#setup' style='text-decoration:none;'>Setup</a><br>3. <a href='#code' style='text-decoration:none;'>Code</a><br>4. <a href='#run' style='text-decoration:none;'>Conclusion</a></p>
+            </div>
+        </div>
+        <div id='tocmo'>
+            <div id='tableofcontentsmo'>
+                <h3>Table of Contents</h3><br><br>
+                <p>1. <a href='#articlee' style='text-decoration:none;'>Introduction</a><br>2. <a href='#setup' style='text-decoration:none;'>Setup</a><br>3. <a href='#code' style='text-decoration:none;'>Code</a><br>4. <a href='#run' style='text-decoration:none;'>Conclusion</a></p>
+            </div><br><br></div>
+        <div id='articlee'>
+            <h2>The Guide</h2><br><br>
+            <p style='font-size:24px;'>
+                Discord OAUTH2 is a (rather) new OAUTH system that allows users to login to a website with Discord. OAUTH, also known as OAuth or Open Authentication, is a system that allows large websites to grant third-party applications limited information on a user
+                when the user grants access to the third-party app/website. This allows users to sign in to many websites accross the web by logging in with one website and granting access to the third-party application. This system can be complex at
+                first, but overall it is worth the effort. This example will use Node.js.<span id='setup'><br><br><b style='font-size:32px;'><a target="_blank" href='https://discord.com/developers/applications' style='text-decoration:none;color:black;'>Setup in the Discord Developer Portal</a></b><br><br>To start, you will need to create an application in the <a href='https://discord.com/developers/applications' target="_blank" style='text-decoration:none;'>Discord Developer Portal</a>. To do so, first login with your regular discord account then press "New Application" at the top right corner.<br><img src='https://i.ibb.co/6sksm81/Hnet-com-image.png' alt='Create the application button' id='limg1' class='limg' style='max-height:500px;width:auto;max-width:95%;height:auto;'><br>    When you click on the "New Application" button, a popup will open and it will prompt you for the application name (and possibly team). Enter your application name in the designated space then click "Create" or press Enter.<br><img src='https://i.ibb.co/vc0mGLT/Hnet-com-image-1.png' alt='Step 2' id='limg2' style='max-height:500px;width:auto;max-width:95%;height:auto;'><br>Next, click on the OAuth2 tab.<br><img src="https://i.ibb.co/JRxJFXY/do3.png" alt="Step 3" id='limg3' style='max-height:400px;width:auto;max-width:95%;height:auto;'><br>Make a note of your Client ID and Client Secret. They will be used later.<br><img src='https://i.ibb.co/cwr5FFR/image.png' alt='Step 4 image' id='limg4' style='max-height:400px;width:auto;border-radius:5px;max-width:95%;height:auto;'><br>Click "Add Redirect" then type <code style='font-size:18px;'>http://localhost:7100/</code> into the box and save your changes.<br><img src='https://i.ibb.co/997m9Hk/do5.png/' alt='limg5'><br>Then, in the dropdown menu below the redirects section, select your URL and then select "Identify" from the box below. You should see a link form. Copy that link (either with CTRL/CMD C or with the copy button next to it) and save it somewhere. It will come in handy.<br id='code'><br><h2>The Code</h2><br><br>
+                To actually program and integrate Discord Oauth2 in your program, we must first understand what steps are needed in order to do so. For this tutorial, I will be using Node.js. First, open a terminal (you can do so by opening a command prompt in Windows or using one in your code editor). You will need to install several dependencies. Be sure you have Node.js and npm intsalled first. To install the dependencies, enter each of the following in your terminal:<br><ul id='dependencies'><li><code>npm i express</code></li><li><code>npm i url</code></li><li><code>npm i axios</code></li><li><code>npm i path</code></li><li><code>npm i body-parser</code></li><li><code>npm i node-fetch</code></li></ul><br>Each of these dependencies will play a part in the code. Express is for node.js web servers, URL will be used for creating URL search parameters, axios will be used to fetch data from APIs, etc. First, create an <code>oauth.js</code> file. For simplicity, I named it oauth.js, but you are free to name it however you would like. First, we will want to "import", or "require" our dependencies. To do so, enter the following code.<br><div class='cbm'><code class='cb'>const Express = require('express');<br>const { URLSearchParams } = require('url'); // can also use form-data<br>const axios = require('axios');<br>const path = require('path');<br>const bodyParser = require('body-parser');<br>const fetch = require('node-fetch');</code></div>This chunk of code defines all the dependencies we will be using in our code. If you run the program in your terminal (<code>node oauth.js</code>), you shouldn't get any errors. If you do get any, you probably didn't install the dependencies correctly. Next, let's define our bot variables. Remember when you got the Client ID and Client Secret? Those will come in handy now.<div class='cbm'><code class='cb'>const client_id = ''; // Paste your bot's ID here (in between the apostrophes)<br>const client_secret = ''; // Paste your bot's secret here (in between the apostrophes).</code></div>
+            This tells the program your client info so the program can later make a request to the Discord API with that info. Next, let's define some more things.<div class='cbm'><code class='cb'>const app = Express(); // Create a web app<br>const port = 7100; // Port to host on<br>/* Make a function to give us configuration for the Discord API */<br>function make_config(authorization_token) { // Define the function<br><span style='margin-left:40px;'>data = { // Define "data"</span><br>
+                <span style='margin-left:80px;'>headers: { // Define "headers" of "data"</span><br><span style='margin-left:120px;'>"authorization": `Bearer ${authorization_token}` // Define the authorization</span><br><span style='margin-left:80px;'>}</span><br>
+                <span style='margin-left:40px;'>};</span><br><span style='margin-left:40px;'>return data; // Return the created object</span><br>}</code>
+        </div>
+        The above code creates a new express application and creates a function that will generate headers for a Discord API request. Next, let's configure our app to be able to read and interpret inputs in POST and GET requests.
+        <div class='cbm'><code class='cb'>app.use(Express.urlencoded({ extended: false })); // configure the app to parse requests with urlencoded payloads<br>app.use(Express.json()); // configure the app to parse requests with JSON payloads<br>app.use(bodyParser.text());</code></div><br>The
+        code above helps our app parse incoming requests of different types. Next, let's handle the default GET request that will trigger once you visit http://localhost:(port)/. To do this, we will use the app.get() function.
+        <div class='cbm'><code class='cb'>app.get('/', (req, res) => {<br><span style='margin-left: 40px;'>res.sendFile(path.join(__dirname + '/index.html')); // Send the index.html file</span><br>});</code></div>In the code above, when the server receives a GET request,
+        it will send the index.html file (we haven't created it yet, we'll save that for last). The app.get() method first takes the path, in this case just a "/". The second input is a callback function, which we used arrow function syntax for.<br>Alright.
+        Let's get into the bulkier code. Let's make our server handle POST requests to /user. This will get the info on that user from the Discord API. To start, we will use app.post(). Let's enter the following into oauth.js:
+        <div class='cbm'><code class='cb'>app.post('/user', (req, res) => {<br><br>};</code></div><br>Notice that the code above won't actually do much. To actually understand how to get the user info, let's take a look at how OAuth works. First, the user will click a
+        link to be redirected to a login portal. Once they login through the portal, they will be redirected back to our page with a code. We can then make a request to the Discord API with that code to retrieve an access token. With that access token,
+        we can make one final request to the Discord API to get the user's actual info, such as username, ID, tag, etc. Our index.html file will send a POST request to the /user path with the code we initially get from logging in through the portal. Our
+        <code>req.body</code> will be the code OAuth2 gives the user's browser when redirecting the user. To get the access token, we will have to make a request to the Discord API with certain parameters. This is where the URL dependency comes in hand.
+        We can use it to construct the parameters we must send to the API.<br>Replace the existing app.post() with this new one:<br>
+        <div class='cbm'><code class='cb'>app.post('/user', (req, res) => {<br><span style='margin-left: 40px;'>const data_1 = new URLSearchParams();</span><br><span style='margin-left: 40px;'>data_1.append('client_id', client_id);</span><br><span style='margin-left: 40px;'>data_1.append('client_secret', client_secret);</span><br><span style='margin-left: 40px;'>data_1.append('grant_type', 'authorization_code');</span><br><span style='margin-left: 40px;'>data_1.append('redirect_uri', `http://localhost:${port}/`);</span><br><span style='margin-left: 40px;'>data_1.append('scope', 'identify');</span><br><span style='margin-left: 40px;'>data_1.append('code', req.body);</span><br>};</code></div>
+        <br>When the server receives a POST request, it will now construct form data. That's not all! Before moving on though, let me explain what is happening. The server will first create a constant, <code>data_1</code>, then assign data to it. It will
+        give the basic info (client ID, client secret (yes, that's what they are used for in this case!)), the grant type, redirect URI, scope, and code. The grant type is essentially what you want or need from the API. In this case, we're looking for
+        the authorization token. The redirect URI is where the users was redirected. It should be the same as the one you put in the developer portal. The scope is what kind of information you are looking for on the user. In this case, we only selected
+        Identify. You can add more by selecting the appropriate ones in the developer portal and adding them into the link and where the scope is appended to the data. If you add more, be sure to add a %20 in between each scope. Finally, we have the code.
+        The code is the initial code the user got from being redirected from the login link. That's all the data. Next thing to do is to make a request to the Discord API. We'll be using node-fetch initially. We'll want to make a POST request. Replace
+        your app.post() function with this.<br>
+        <div class='cbm'><code class='cb'>app.post('/user', (req, res) => {<br><span style='margin-left:40px;'>const data_1 = new URLSearchParams();</span><br><span style='margin-left:40px;'>data_1.append('client_id', client_id);</span><br><span style='margin-left:40px;'>data_1.append('client_secret', client_secret);</span><br><span style='margin-left:40px;'>data_1.append('grant_type', 'authorization_code');</span><br><span style='margin-left:40px;'>data_1.append('redirect_uri', `http://localhost:${port}/`);</span><br><span style='margin-left:40px;'>data_1.append('scope', 'identify');</span><br><span style='margin-left:40px;'>data_1.append('code', req.body);</span><br><span style='margin-left:40px;'>fetch('https://discord.com/api/oauth2/token', { method: "POST", body: data_1 }).then(response => response.json()).then(data => {</span><br><br><span style='margin-left:40px;'>};</span><br>};</span></code></div>
+        <br>In the code above, we package the data then make a POST request to the Discord API for the authorization token. Once it gets a response, .then() will activate, and the response will be converted to a JSON format. Then when that is done, it
+        takes the response in a JSON format and is then ready to execute the next part of the code. We're almost done. What comes next is making yet another request to the Discord API to get the user info. This is the final one in this file. We will be
+        using Axios for this request. Inside of the <b>fetch() function last callback</b> (where it goes <code>data => {</code>), enter the following code.<br>
+        <div class='cbm'><code class='cb'>axios.get("https://discord.com/api/users/@me", make_config(data.access_token)).then(response => {<br><span style='margin-left:40px;'>res.status(200).send(response.data.username);</span><br>}).catch(err => {<br><span style='margin-left:40px;'>console.log(err);</span><br><span style='margin-left:40px;'>res.sendStatus(500);</span><br>});</code>
+        </div>
+        What this code does is it makes a request with axios to the user info endpoint in the Discord API. It will then send the username to wherever the request originates from (in this case, it should be the index.html file (still yet to be made)). In the event
+        of an error, it will send a status 500 code (internal server error code).
+        <br><br>Just a few more lines to go. Now, if you run the program, you won't get any result when you try to load the page. That's because the server isn't listening. To complete the oauth.js file, paste this code at the end.<br>
+        <div class='cbm'><code class='cb'>app.listen(port, function() {<br><span style='margin-left:40px;'>console.log(`App listening! Link: http://localhost:${port}/`);</span><br>});</code></div><br>This code will tell the app to start listening for requests and once
+        it is up and running, you will get a message in the console.<br><br>
+        <h3>index.html</h3><br><br>We're done with the bulk of this code! All that is left is to create the HTML file, which should go by quickly. I'm not going to spend too much time going over it, as there is a lot of room for users to expand the file and
+        design on. The code is as follows:<br>
+        <div class='cbm'><code class='cb'><pre>
+    &lt;html lang='en'&gt;
+        &lt;head&gt;
+            &lt;meta charset='utf-8' /&gt;
+            &lt;title&gt;Discord OAUTH&lt;/title&gt;           
+            &lt;style&gt;
+                * {
+                    text-align: center;
+                    margin: 0px auto;
+                }
+                    
+                #welcome_txt {
+                    font-size: 24px;
+                }
+                  
+                #login-link {
+                    background-color: whitesmoke;
+                    border-radius: 8px;
+                    color: black;
+                    padding: 15px 30px;
+                    text-align: center;
+                    text-decoration: none;
+                    display: inline-block;
+                    font-size: 20px;
+                }
+                    
+                #login-link:hover {
+                    cursor: pointer;
+                }
+            &lt;/style&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;br&gt;
+            &lt;a id='login-link' href='[DISCORD OAUTH LINK HERE]'&gt;Login with Discord&lt;/a&gt;&lt;br&gt;&lt;br&gt;
+            &lt;p id='welcome_txt'&gt;&lt;/p&gt;
+            &lt;script&gt;
+                window.onload = function() {
+                    if (location.href.indexOf("code") !== -1) { // Detect if you logged in or not
+                        const code = location.href.substring(location.href.indexOf("code") + 5, location.href.length); // Get the code OAUTH gives you
+                        const request = new XMLHttpRequest(); // Create a new XMLHttpRequest
+                        request.open("POST", "http://localhost:7100/user"); // Open the XMLHttpRequest
+                        request.send(code); // Send the code in the request
+                        request.onload = () =&gt; { // Will run when the request is loaded
+                            if (request.status === 500) { // Error
+                                document.getElementById('welcome_txt').innerText = `There was an error with that. Please try logging in again. Error Code: ${req.status}`;
+                            } else if (request.status === 200) { // Successful
+                                document.getElementById("welcome_txt").innerText = `Welcome, ${req.responseText}!`
+                            } else { // Other
+                                document.getElementById('welcome_txt').innerText = `An error occured. Please try logging in again. Error Code: ${req.status}`;
+                            }
+                        }
+                    }
+                }
+            &lt;/script&gt;
+        &lt;/body&gt;        
+    &lt;/html&gt;</pre></code></div><br>In essence, this code is basic HTML code that will display a button that will link you to your Discord OAuth2 link. When you are redirected with a code, it will detect the code and make a POST request to your server.
+        When it gets a response, it will display it on a page. <b>Be sure to paste your OAuth2 link where index.html states <code id='run'>[DISCORD OAUTH LINK HERE]</code>.</b><br><br>
+        <h2>Conclusion</h2><br><br>You've made a web server that supports logging in with Discord OAuth2! Congrats! Before running the program, make sure you have pasted in your Client ID and Client Secret (in oauth.js) and pasted your OAuth2 link where it
+        goes in the index.html file. If you changed the port, be sure to change the port variable AND the POST request link in oauth.js and index.html, respectively.<br><br><b>To run the program, type  <code style='background-color:whitesmoke;'>node oauth.js</code>  in your console and navigate to your <a href="http://localhost:7100/" style='color:black;text-decoration:none;' target="_blank">localhost</a> address. Click on "Login With Discord", login, wait a second or two, and it should work!</b>
+        <br><br>If you would like the full code, you can find it <a href='https://github.com/WhoAmI1000/discord-oauth2-example' style='text-decoration:none;' target="_blank">here</a>.<br>Happy coding!</p><br><br>
+        <br></div>
+    <script>
+        var mobilesettings;
+        var adjustscc = function() {
+            if (window.innerWidth <= 605) {
+                mobilesettings = true;
+            }
+            if (window.innerWidth > 605) {
+                mobilesettings = false;
+            }
+            if (mobilesettings === true) {
+                document.getElementById("limg1").setAttribute("class", "limg");
+                document.getElementById("limg2").setAttribute("class", "limg");
+                document.getElementById("limg3").setAttribute("class", "limg");
+                document.getElementById("limg4").setAttribute("class", "limg");
+                document.getElementById("limg5").setAttribute("class", "limg");
+
+            }
+            if (mobilesettings === false) {
+                document.getElementById("limg1").setAttribute("class", "limgn");
+                document.getElementById("limg2").setAttribute("class", "limgn");
+                document.getElementById("limg3").setAttribute("class", "limgn");
+                document.getElementById("limg4").setAttribute("class", "limgn");
+                document.getElementById("limg5").setAttribute("class", "limgn");
+            }
+        }
+        adjustscc();
+    </script>
+    <script>
+        var mobile;
+        var adjustsc = function() {
+            if (window.innerWidth <= 750) {
+                mobile = true;
+            }
+            if (window.innerWidth >= 750 && window.innerWidth <= 1550) {
+                mobile = 'middle';
+            }
+            if (window.innerWidth > 1550) {
+                mobile = false;
+            }
+            if (mobile === true) {
+                document.getElementById("articlee").setAttribute("class", "articlemobile");
+            }
+            if (mobile === false) {
+                document.getElementById("articlee").setAttribute("class", "articledesktop");
+            }
+            if (mobile === 'middle') {
+                document.getElementById("articlee").setAttribute("class", "articlemiddle");
+            }
+        }
+        adjustsc();
+
+        //DIVIDER... SCRIPTS 1 AND 2 END AND START HERE
+
+        // When the user scrolls the page, execute myFunction
+        window.onscroll = function() {
+            myFunction()
+        };
+
+        // Get the navbar
+        var navbar = document.getElementById("tocd");
+
+        // Get the offset position of the navbar
+        var sticky = navbar.offsetTop;
+
+        // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+        function myFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+        var adjustccc = function() {
+            adjustsc();
+            adjustscc();
+        }
+    </script>
+    <!--<script>
+    var mobile;
+  if( screen.availWidth <= 1130 ) {
+    document.getElementById("tableofcontents").setAttribute("class","tableofcontentsmo");
+  }
+  if(screen.availWidth >= 1500){
+    document.getElementById("tableofcontents").setAttribute("class","tableofcontentsd");
+  }</script>-->
+    <br><br><br><br><br><br><br><br><br><br><br>
+    <br>
+    <br></div>
+    <script src='/include_html.js'></script>
+    </div>
+    <div id='footer' w3-include-html="/footer.html"></div>
+    <script>
+        includeHTML();
+    </script>
+
+</html>

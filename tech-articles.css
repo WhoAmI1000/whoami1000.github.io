@@ -1,0 +1,415 @@
+body {
+    background-color: white;
+    font-family: "Times New Roman", Times, serif;
+    text-align: center;
+}
+
+#tit {
+    font-family: "Copperplate";
+}
+
+#top {
+    font-family: "Copperplate";
+}
+
+#images1 {
+    height: 1000px;
+}
+
+#top {
+    text-align: center;
+}
+
+#about {
+    height: 1000px;
+    background-color: darkgray;
+}
+
+#ta1 {
+    border-radius: 8px;
+}
+
+#calcsec2 {
+    border-radius: 8px;
+}
+
+#txt1 {
+    color: white;
+    font-size: 7vw;
+}
+
+#info {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+#weeklynews {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 20px;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.nb {
+    list-style-type: none;
+    background-color: black;
+    text-decoration-color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.containimage {
+    position: relative;
+    text-align: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 48px;
+    border-radius: 5%;
+}
+
+.border5 {
+    border-radius: 5%
+}
+
+.containimage2 {
+    position: relative;
+    text-align: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 48px;
+}
+
+.bottom-left {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+}
+
+.top-left {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+}
+
+.top-right {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+}
+
+.bottom-right {
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.centered2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#img2nt {
+    color: white;
+    font-size: 72px;
+}
+
+#img3nt {
+    color: white;
+    font-size: 72px;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#contact {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 24px;
+    background-color: white;
+    color: black;
+}
+
+li a:hover:not(.active) {
+    background-color: rgb(122, 122, 122);
+}
+
+#navbar {
+    width: 14.3%
+}
+
+#img1 {
+    border-radius: 12px;
+    height: 1000px;
+    /*width:100%;*/
+    /*background-size: cover;*/
+    background-repeat: no-repeat;
+}
+
+body,
+html {
+    height: 100%;
+    margin: 0;
+}
+
+#img1n {
+    background-image: url("https://i0.hippopx.com/photos/397/22/487/keyboard-computer-laptop-black-preview.jpg");
+    /* Credit: Hippopx */
+    /* Full height */
+    height: 100%;
+    background-attachment: fixed;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#info {
+    background-color: rgb(50, 75, 100);
+    color: white;
+}
+
+.container img {
+    width: 100%;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    text-decoration-color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+    background-color: rgb(122, 122, 122);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: black;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: rgb(0, 49, 60);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.ghighlight {
+    background-color: #E8E8E8;
+}
+
+.linkimg {
+    border-radius: 5%;
+}
+
+.buttongray {
+    background-color: gray;
+    /* Gray */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.articlemobile {
+    width: 95%;
+    background-color: white;
+    text-align: center;
+    border: 0.5px solid lightgray;
+    align-items: center;
+    margin: 0 auto;
+    font-family: 'Abhaya Libre';
+    padding: 5px;
+}
+
+.articlemiddle {
+    width: 70%;
+    background-color: white;
+    text-align: center;
+    border: 0.5px solid lightgray;
+    align-items: center;
+    margin: 0 auto;
+    font-family: 'Abhaya Libre';
+    padding: 5px;
+}
+
+.articledesktop {
+    width: 35%;
+    background-color: white;
+    text-align: center;
+    border: 0.5px solid lightgray;
+    align-items: center;
+    margin: 0 auto;
+    font-family: 'Abhaya Libre';
+    padding: 5px;
+    margin-top: 50px;
+}
+
+#tableofcontents {
+    float: left;
+    border: 0.5px solid gray;
+    text-align: center;
+    margin-left: 100px;
+    padding: 25px;
+    font: Verdana;
+    /*overflow:hidden;
+position:fixed;
+top:100px;
+left:100px;
+background-color:white;*/
+}
+
+.hl {
+    color: rgb(34, 87, 99)
+}
+
+#tableofcontentsmo {
+    border: 0.5px solid gray;
+    text-align: center;
+    margin: auto;
+    width: 50%;
+    padding: 15px;
+    font: Verdana;
+}
+
+.button1 {
+    font-size: 10px;
+}
+
+.button2 {
+    font-size: 12px;
+}
+
+.button3 {
+    font-size: 16px;
+}
+
+.button4 {
+    font-size: 20px;
+}
+
+.button5 {
+    font-size: 20px;
+}
+
+@media only screen and (max-width: 1550px) {
+    #tocd {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1551px) {
+    #tocmo {
+        display: none;
+    }
+}
+
+div.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    margin-top: 50px;
+    top: 10px;
+    font-size: 28px;
+    left: 185px;
+}
+
+.limg {
+    width: 95%;
+    border-radius: 8px;
+}
+
+.limgn {
+    border-radius: 5px;
+}
+
+img {
+    max-height: 500px;
+    width: auto;
+    max-width: 95%;
+    height: auto;
+    border-radius: 5px;
+}
+
+code {
+    font-size: 16px;
+}
+
+.cbm {
+    margin: auto auto;
+    background-color: whitesmoke;
+    max-width: 100%;
+    word-wrap: break-word;
+    border-radius: 8px;
+}
+
+.cb {
+    margin: 5px auto;
+    text-align: left;
+    float: left;
+    background-color: whitesmoke;
+    width: 99%;
+    max-width: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+pre {
+    overflow-x: auto;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
+}
