@@ -6,7 +6,7 @@
     <title>Technology Tutorials | CirclR</title>
     <link rel="shortcut icon" type="image/png" href="https://i.imgur.com/7BbGspa.png" />
     <meta name="description" content="Circle R Website Technology Tutorials">
-    <meta name="keywords" content="Circle R, CirclR, CircleR, Website, tutorials, Tutorials, how to, tech tutorials, tech help, technology, tech">
+    <meta name="keywords" content="Circle R, CirclR, CircleR, Website, tutorials, Tutorials, how to, tech tutorials, tech help, technology, tech, certain sites won't load, some sites not loading, discord oauth2 example js">
     <meta name="author" content="The CirclR Team">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="language" content="english">
@@ -147,7 +147,7 @@
             position: absolute;
             top: 50%;
             left: 50%;
-            font-size: 0.7em;
+            font-size: 0.6em;
             transform: translate(-50%, -50%);
         }
         
@@ -357,10 +357,10 @@
         <!--<div id='containimage'><img src='https://i.ibb.co/ChS6k5D/aircraft-4544819-960-720-1.jpg'><div class='centered'>How to Land in FSX</div></div>-->
         <div class="containimage">
             <a href="/certain-sites-not-working"><img id='limg1' class='limgn' src="https://i.imgur.com/ac0MFP5.png" alt="Abstract image for links (supposed to be here but I guess not)" , style='border-radius:20px;'></a>
-            <div class="centered" style='color:black;font-size:5;'>A Quick Fix To<br>Some Websites Not Connecting</div>
+            <div class="centered" style='color:black;font-size:1;'>A Quick Fix To<br>Some Websites Not Connecting</div>
         </div>
         <div class="containimage">
-            <a href="/working-with-discord-oauth2"><img id='limg1' class='limgn' src="https://i.ibb.co/qpjW57M/do6-5.jpg" alt="Image of code for link (supposed to be here but I guess not, once again)" , style='border-radius:20px;'></a>
+            <a href="/working-with-discord-oauth2"><img id='limg2' class='limgn' src="https://i.ibb.co/qpjW57M/do6-5.jpg" alt="Image of code for link (supposed to be here but I guess not, once again)" , style='border-radius:20px;'></a>
             <div class="centered" style='color:white;font-size:5;'>Discord OAuth2<br>In Node.JS</div>
         </div>
         <br><br></div>
@@ -394,9 +394,11 @@
             }
             if (mobilesettings === true) {
                 document.getElementById("limg1").setAttribute("class", "limg");
+                document.getElementById("limg2").setAttribute("class", "limg");
             }
             if (mobilesettings === false) {
                 document.getElementById("limg1").setAttribute("class", "limgn");
+                document.getElementById("limg2").setAttribute("class", "limgn");
             }
         }
         adjustsc();
