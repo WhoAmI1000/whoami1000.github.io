@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf8">
+    <title>NodeJS Web Server Example Code with Express JS | CirclR</title>
+    <link rel="shortcut icon" type="image/png" href="https://i.imgur.com/7BbGspa.png" />
+    <meta name="description" content="Using Discord OAuth2 in Node.js | Circle R">
+    <meta name="keywords" content="Circle R, CirclR, CircleR, NodeJS Web Server, example, code, NodeJS Web server example code, http, simple node server, nodejs http, run node server locally, node http tutorial, node js web server, nodejs http server example, express, expressjs, express.js, node.js, node, web, localhost, local, server">
+    <meta name="author" content="The CirclR Team">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Abhaya Libre' rel='stylesheet'>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8TW6E2X2QT"></script>
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js?lang=js&amp;skin=desert"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-8TW6E2X2QT');
+    </script>
+    <link rel='stylesheet' href='tech-articles.css'>
+</head>
+
+<body onresize="adjustccc()">
+    <script>
+        /*if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            var mobile = true;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          }*/
+    </script>
+    <div id="navbar">
+        <ol class="nb">
+            <li style='float: left;' class='lia'><a href="/index.html">Home</a></li>
+            <li style='float: left;' class='lia'><a href="/technology-tutorials">More Tech Tutorials</a></li>
+            <li style="float:right" class='lia'><img class="active" src="https://i.imgur.com/xX7yL6s.png" alt="(CirclR Logo should be here, but it's not, this is usually a client-side error, we apologize anyways.)"></li>
+            <li></li>
+        </ol>
+    </div>
+    <div id="img1n"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <p id="txt1" style="color:white;">Creating a Web Server in Node.js with Express</p>
+    </div>
+    <div id="contact">
+        <br><br>
+        <h1>Local Web Server Tutorial</h1><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br>
+        <div id='tocd'>
+            <div id='tableofcontents' class='sticky'>
+                <h3>Table of Contents</h3><br><br>
+                <p>1. <a href='#articlee' style='text-decoration:none;'>Introduction</a><br>2. <a href='#setup' style='text-decoration:none;'>Code</a><br>3. <a href='#conclusion' style='text-decoration:none;'>Conclusion</a></p>
+            </div>
+        </div>
+        <div id='tocmo'>
+            <div id='tableofcontentsmo'>
+                <h3>Table of Contents</h3><br><br>
+                <p>1. <a href='#articlee' style='text-decoration:none;'>Introduction</a><br>2. <a href='#setup' style='text-decoration:none;'>Code</a><br>3. <a href='#conclusion' style='text-decoration:none;'>Conclusion</a></p>
+            </div><br><br></div>
+        <div id='articlee'>
+            <h2>The Guide</h2><br><br>
+            <p style='font-size:24px;'>
+                Setting up a web server in Node.JS can be confusing at first, but it gets pretty simple. In this example, we will be using <a href='https://nodejs.org/en/' style='color:black;text-decoration:none;' target="_blank">Node.js</a> and <a href='https://expressjs.com/'
+                    style='color:black;text-decoration:none;' target="_blank">Express</a>. You can use other web frameworks, but I find that Express works well. If you would like a tutorial that goes a little more in-depth into possible applications of Express,
+                check out
+                <a href='working-with-discord-oauth2.html' style='text-decoration:none' target="_blank">this</a> tutorial on Discord OAUTH2 with Node.js and Express.<br><br>
+                <h3>The Code</h3><br><br>To start off, let's go through our dependencies for this project. Before starting, be sure you have Node.js and npm installed. You can check if npm is installed by running <code>npm version</code> in a console or terminal.
+                If you have them installed, go ahead and run the following in your console/terminal:<br>
+                <ul>
+                    <li><code>npm i express</code></li>
+                    <li><code>npm i body-parser</code></li>
+                    <li><code>npm i path</code></li>
+                </ul>Those should be sufficient for now. Let's go ahead and create a file called <code>index.js</code> for our server-side code. Let's also write our first lines in that file.
+                <div class='cbm'>
+                    <pre class='prettyprint cb'>
+const express = require('express');
+const bodyParser = require('body-parser');
+const path = require('path');
+const port = 7000;
+const app = express();
+if (isNaN(port)) process.exit(1); // Exits the program if the port is invalid.
+    </pre>
+
+                </div>The code above defines four variables: express, bodyParser, path, app, and port. The express, bodyParser, and path variables are modules that we will use later. Our port variable is for whichever port we would like our program to
+                host on. The app variable defines a new express app. The server will then check if the port variable is invalid. If it is, the program will stop execution. Let's write our next chunk of code. Here, we will configure our app.
+                <div class='cbm'><pre class='prettyprint cb'>
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+app.use(bodyParser.text()); // Optional
+                </pre></div>Those three lines of code allow our server to interpret incoming requests. Now, it's time to get to the fun part. Listening for incoming requests. To do so, we will use <code>app.get()</code>. This method will handle GET requests
+                to the specified address.
+                <div class='cbm'><pre class='cb prettyprint'>
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname + '/index.html')); // Send the index.html file. Path is used to more reliably get files from their names and the directory.
+});
+                </pre></div>The code above will listen for any GET requests to <code>http://localhost:(port)/</code> and if it receives any, it will send the index.html file, which we still have yet to create. This is most of the backend code! Let's quickly
+                go through what the <code>app.get()</code> method is. When the app receives a GET request to the specified address (first parameter), the function (second parameter) will execute. There are also other methods provided by Express for other
+                types of requests, such as POST. A POST request handler can allow you to host an API with express. An example of <code>app.post()</code> is included in <a href='working-with-discord-oauth2.html' style='text-decoration:none;' target="_blank">this tutorial</a>                on Discord OAuth2. We're almost done. If you run the program now, you won't see anything when you go to the localhost link. That's because the app is not listening (and the index.html file has not been created yet). To make our app listen
+                for requests, add in this snippet of code.
+                <div class='cbm'><pre class='cb prettyprint'>
+app.listen(port, () => {
+    console.log(`App listening! Address: http://localhost:${port}/`);
+});
+                </pre></div>This code will tell the app to start listening on the specified port variable and will log the link in the console when it is up.<br>Alright. We have the index.js file set up. Let's create our index.html file. I am just going
+                to create an index.html file that prints Hello World! in an h1 tag, for the sake of this demo.
+                <div class='cbm'><pre class='cb prettyprint'>
+&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+&lt;title&gt;Express.js Web Server Example&lt;/title&gt;
+&lt;meta charset="utf-8" /&gt;
+
+&lt;style&gt;
+    #main_text {
+        text-align: center;
+    }
+&lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;h1 id='main_text'&gt;Hello World!&lt;/h1&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+                </pre></div>
+                This code is just a basic and simple HTML file that will print "Hello World!" on the page. But we've completeted the code!<br><br>
+                <h3>Conclusion</h3><br><br>To run the program, navigate to the directory in your terminal/console, type in <code>node index.js</code>, then navigate to <a href='http://localhost:7000/' target='_blank' style='text-decoration:none;color:black;'>http://localhost:7000/</a>                (or whichever port you chose to use). You can add more files and paths. This just covers setting up a simple web server with Node.js.<br>Happy programming!
+                <br><br>
+                <h2>Related Articles</h2>
+                <ul>
+                    <li>
+                        <a href='working-with-discord-oauth2' style='text-decoration:none;'>Working with Discord OAuth2 in Node.js</a>
+                    </li>
+                </ul>
+            </p>
+            <br></div><br><br>
+
+        <script>
+            var mobilesettings;
+            var adjustscc = function() {
+                if (window.innerWidth <= 605) {
+                    mobilesettings = true;
+                }
+                if (window.innerWidth > 605) {
+                    mobilesettings = false;
+                }
+
+                if (mobilesettings === true) {
+                    try {
+                        document.getElementById("limg1").setAttribute("class", "limg");
+                    } catch {}
+                    try {
+                        document.getElementById("limg2").setAttribute("class", "limg");
+                    } catch {}
+                    try {
+                        document.getElementById("limg3").setAttribute("class", "limg");
+                    } catch {}
+                    try {
+                        document.getElementById("limg4").setAttribute("class", "limg");
+                    } catch {}
+                    try {
+                        document.getElementById("limg5").setAttribute("class", "limg");
+                    } catch {}
+
+                }
+                if (mobilesettings === false) {
+                    try {
+                        document.getElementById("limg1").setAttribute("class", "limgn");
+                    } catch {}
+                    try {
+                        document.getElementById("limg2").setAttribute("class", "limgn");
+                    } catch {}
+                    try {
+                        document.getElementById("limg3").setAttribute("class", "limgn");
+                    } catch {}
+                    try {
+                        document.getElementById("limg4").setAttribute("class", "limgn");
+                    } catch {}
+                    try {
+                        document.getElementById("limg5").setAttribute("class", "limgn");
+                    } catch {}
+                }
+            }
+            adjustscc();
+        </script>
+        <script>
+            var mobile;
+            var adjustsc = function() {
+                if (window.innerWidth <= 750) {
+                    mobile = true;
+                }
+                if (window.innerWidth >= 750 && window.innerWidth <= 1550) {
+                    mobile = 'middle';
+                }
+                if (window.innerWidth > 1550) {
+                    mobile = false;
+                }
+                if (mobile === true) {
+                    document.getElementById("articlee").setAttribute("class", "articlemobile");
+                }
+                if (mobile === false) {
+                    document.getElementById("articlee").setAttribute("class", "articledesktop");
+                }
+                if (mobile === 'middle') {
+                    document.getElementById("articlee").setAttribute("class", "articlemiddle");
+                }
+            }
+            adjustsc();
+
+            //DIVIDER... SCRIPTS 1 AND 2 END AND START HERE
+
+            // When the user scrolls the page, execute myFunction
+            window.onscroll = function() {
+                myFunction()
+            };
+
+            // Get the navbar
+            var navbar = document.getElementById("tocd");
+
+            // Get the offset position of the navbar
+            var sticky = navbar.offsetTop;
+
+            // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+            function myFunction() {
+                if (window.pageYOffset >= sticky) {
+                    navbar.classList.add("sticky")
+                } else {
+                    navbar.classList.remove("sticky");
+                }
+            }
+            var adjustccc = function() {
+                adjustsc();
+                adjustscc();
+            }
+        </script>
+        <!--<script>
+    var mobile;
+  if( screen.availWidth <= 1130 ) {
+    document.getElementById("tableofcontents").setAttribute("class","tableofcontentsmo");
+  }
+  if(screen.availWidth >= 1500){
+    document.getElementById("tableofcontents").setAttribute("class","tableofcontentsd");
+  }</script>-->
+        <br><br><br><br><br><br><br><br><br><br><br>
+        <br>
+        <br></div>
+    <script src='/include_html.js'></script>
+    </div>
+    <div id='footer' w3-include-html="/footer.html"></div>
+    <script>
+        includeHTML();
+    </script>
+
+</html>
