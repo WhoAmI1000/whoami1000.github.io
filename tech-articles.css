@@ -136,7 +136,7 @@ body {
     font-size: 72px;
 }
 
-li a {
+ol li a {
     display: block;
     color: white;
     text-align: center;
@@ -151,7 +151,7 @@ li a {
     color: black;
 }
 
-li a:hover:not(.active) {
+ol li a:hover:not(.active) {
     background-color: rgb(122, 122, 122);
 }
 
